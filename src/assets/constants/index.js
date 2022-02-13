@@ -95,3 +95,92 @@ export const sides = [
     title: "Feijão Verde",
   },
 ];
+
+export const foodies = [
+{
+  title: "Omelete de queijo mussarela, tomate e orégano",
+  price: "12,90"
+},
+{
+  title: "Omelete misto de queijo e presunto",
+  price: "12,90"
+},
+{
+  title: "Omelete de frango",
+  price: "13,90"
+},
+{
+  title: "Tapioca de queijo coalho",
+  price: "8,90"
+},
+{
+  title: "Tapioca de Coco e queijo coalho",
+  price: "9,90"
+},
+{
+  title: "Tapioca de Frango com queijo coalho",
+  price: "10,90"
+},
+{
+  title: "Cuscuz com Charque e queijo",
+  price: "10,90"
+},
+{
+  title: "Cuscuz simples apenas com manteiga derretida",
+  price: "7,90"
+},
+{
+  title: "Cuscuz com charque",
+  price: "12,90"
+},
+{
+  title: "Cuscuz com ovo",
+  price: "10,90"
+},
+{
+  title: "Cuscuz a pizzaiolo com molho de tomate, queijo e orégano",
+  price: "12,90"
+},
+{
+  title: "Sanduíche misto de pão baguete",
+  price: "12,90"
+},
+{
+  title: "Sanduíche de queijo e salada em pão baguete",
+  price: "12,90"
+},
+{
+  title: "Sanduíche de frango com queijo e salada em pão baguete",
+  price: "15,90"
+},
+{
+  title: "Croissant Misto",
+  price: "7,90"
+},
+{
+  title: "Croissant de Frango",
+  price: "8,90"
+}
+
+]
+
+export const saladas = [
+  {
+    title: "Salada Caprese",
+    price: "26,90"
+  },
+  {
+    title: "Salada Caesar",
+    price: "28,90"
+  },
+  {
+    title: "Salada Grão de Bico",
+    price: "26,90"
+  },
+  {
+    title: "Salada de Camarão",
+    price: "32,90"
+  },
+  
+  
+]

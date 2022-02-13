@@ -1,6 +1,7 @@
 import Styled from "./styles";
+import logo from "../../assets/images/logo.png"
 
-import {itens, sides} from "../../assets/constants"
+import {itens, sides, foodies, saladas} from "../../assets/constants"
 
 const Menu = () => {
  
@@ -8,8 +9,11 @@ const Menu = () => {
   return (
     <Styled>
       <div className="transparent">
+        <figure className="logo-box">
+          <img src={logo} alt="logo" />
+        </figure>
         <div className="box">
-          <h2>Cardápio</h2>
+          <h2>Almoço</h2>
           <section>
             {itens &&
               itens.map((item, index) => <article key={index}> 
@@ -30,7 +34,28 @@ const Menu = () => {
               {item.desc && <p className="desc">{item.desc}</p>}
               </article>)}
           </section>
-
+          <h2>Saladas</h2>
+          <section>
+            {saladas &&
+              saladas.map((item, index) => <article key={index}> 
+              <div className="title-price">
+                <div>{item.title}</div>
+                <div className="price">R$ {item.price}</div>
+              </div>
+              {item.desc && <p className="desc">{item.desc}</p>}
+              </article>)}
+          </section>
+          <h2>Comidinhas</h2>
+          <section>
+            {foodies &&
+              foodies.map((item, index) => <article key={index}> 
+              <div className="title-price">
+                <div>{item.title}</div>
+                <div className="price">R$ {item.price}</div>
+              </div>
+              {item.desc && <p className="desc">{item.desc}</p>}
+              </article>)}
+          </section>
 
 
 

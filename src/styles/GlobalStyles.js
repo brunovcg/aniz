@@ -4,6 +4,11 @@ const GlobalStyle = createGlobalStyle`
 
 :root {
         --purple: #822B32;
+        --white: #ffffeb;
+        --yellow: #E69C02;
+        --light-yellow: #ffef84;
+        --light-red: #A31A2E;
+        --light-green: #ceffa7;
        
     }
 
@@ -16,6 +21,11 @@ const GlobalStyle = createGlobalStyle`
     body {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+    }
+
+    h2{
+        font-family: 'Dancing Script', cursive;
+        font-size: 40px;
     }
   
  
