@@ -166,21 +166,15 @@ export const foodies = [
 
 export const saladas = [
   {
-    title: "Salada Caprese",
-    price: "26,90"
-  },
-  {
-    title: "Salada Caesar",
+    title: "Salada de Frango",
+    desc: "Salada com mix de folhas, repolho roxo, cenoura ralada e tomate cereja acompanhada de peito de frango grelhado.",
     price: "28,90"
   },
   {
-    title: "Salada Grão de Bico",
-    price: "26,90"
-  },
-  {
     title: "Salada de Camarão",
+    desc: "Salada com mix de folhas, repolho roxo, cenoura ralada e tomate cereja acompanhada de camarões grelhados.",
     price: "32,90"
   },
-  
+
   
 ]

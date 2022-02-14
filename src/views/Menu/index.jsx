@@ -1,5 +1,6 @@
 import Styled from "./styles";
 import logo from "../../assets/images/logo.png"
+import { FaInstagram } from "react-icons/fa";
 
 import {itens, sides, foodies, saladas} from "../../assets/constants"
 
@@ -9,9 +10,15 @@ const Menu = () => {
   return (
     <Styled>
       <div className="transparent">
+        <div className="logo-insta">
         <figure className="logo-box">
           <img src={logo} alt="logo" />
         </figure>
+        <div className="icon">
+          <a href="https://instagram.com/anizcozinha?utm_medium=copy_link"><FaInstagram/><span>{"      "}{ "    anizcozinha"}</span></a>
+          
+        </div>
+        </div>
         <div className="box">
           <h2>Almoço</h2>
           <section>
@@ -56,9 +63,6 @@ const Menu = () => {
               {item.desc && <p className="desc">{item.desc}</p>}
               </article>)}
           </section>
-
-
-
 
 
         </div>

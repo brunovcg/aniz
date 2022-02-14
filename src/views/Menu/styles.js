@@ -20,6 +20,43 @@ const Styled = styled.div`
     align-items: center;
     justify-content: center;
 
+ .logo-insta{
+
+  @media (max-width: 768px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+  .icon{
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    a{
+      color: var(--white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+
+      :hover{
+        color: var(--light-green);
+      }
+
+      span{
+        margin-left: 10px;
+      }
+
+    }
+
+  }
+
+ 
     .logo-box{
       display: flex; 
       justify-content: center;
@@ -34,6 +71,7 @@ const Styled = styled.div`
         width: 70%;
       }
     }
+  }
 
     .box {
       width: 100%;
@@ -46,7 +84,7 @@ const Styled = styled.div`
 
       @media (max-width: 768px) {
         margin-top: 10px;
-        width: 90%;
+        width: 95%;
       }
 
       h2 {
@@ -54,14 +92,19 @@ const Styled = styled.div`
         background: var(--light-red);
         padding: 5px 50px;
         border-radius: 20px;
-        margin: 40px 0 20px 0;
+        margin: 40px 0 0px 0;
         
       }
 
       section {
         width: 100%;
+
         article {
           margin: 30px 30px;
+
+          @media (max-width: 768px) {
+            margin: 30px 15px;
+          }
 
           .title-price {
             width: 100%;
@@ -78,6 +121,12 @@ const Styled = styled.div`
               .price{
                 width: 30%;
                 text-align: end;
+
+                @media (max-width: 768px) {
+                  width: 40%;
+          }
+
+                
               }
             }
           }
@@ -87,7 +136,8 @@ const Styled = styled.div`
             font-size: 17px;
 
             @media (max-width: 768px) {
-              font-size: 13px;
+              margin-top: 5px;
+              font-size: 15px;
             }
           }
         }
