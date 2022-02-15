@@ -5,24 +5,14 @@ export const itens = [
     desc: "Filé de peito de frango, cortado em cubos com molho à base de mostarda e ketchup",
   },
   {
-    title: "Frango Grelhado",
+    title: "Frango grelhado",
     price: "19,90",
     desc: "Filé de peito de frango grelhado",
   },
   {
-    title: "Frango à Parmegiana",
+    title: "Frango à parmegiana",
     price: "21,90",
     desc: "Filé de peito de frango empanado coberto com delicioso molho de tomate",
-  },
-  {
-    title: "Frango à Cubana",
-    price: "22,90",
-    desc: "Frango empanado",
-  },
-  {
-    title: "Frango Thai",
-    price: "22,90",
-    desc: "Frango em cubos com delicioso molho de curry",
   },
   {
     title: "Frango com molho de mostarda",
@@ -30,14 +20,9 @@ export const itens = [
     desc: "Filé de peito de frango grelhado acompanhado por delicioso molho de mostarda",
   },
   {
-    title: "Filé de Tilápia grelhada",
+    title: "Filé de tilápia grelhada",
     price: "31,90",
     desc: "Filé de tilápia grelhado",
-  },
-  {
-    title: "Filé de Tilápia grelhada de alcaparras",
-    price: "31,90",
-    desc: "Filé de tilápia grelhado com delicioso molho de alcaparras e azeite",
   },
   {
     title: "Filé a parmegiana",
@@ -55,19 +40,14 @@ export const itens = [
     desc: "Maminha grelhada na chapa",
   },
   {
-    title: "Filé ao vinho",
-    price: "31,90",
-    desc: "Filé grelhado com molho a base de vinho e creme de leite",
-  },
-  {
-    title: "Filé ao molho madeira",
-    price: "32,90",
-    desc: "Filé grelhado com molho a madeira",
-  },
-  {
     title: "Carne de sol do sertão",
     price: "29,90",
     desc: "Cubos de Carne de Sol acebolada",
+  },
+  {
+    title: "Espaguete á bolonhesa",
+    price: "26,90",
+    desc: "Massa ao molho de tomate e carne moída",
   },
 ];
 
@@ -77,16 +57,19 @@ export const sides = [
     desc: "Mix de folhas, cenoura ralada, repolho roxo, tomatinhos",
   },
   {
-    title: "Macarrão talharim",
+    title: "Macarrão espaguete na manteiga",
   },
   {
-    title: "Pure de batata",
+    title: "Purê de batata",
   },
   {
-    title: "Batata Frita",
+    title: "Batata frita",
   },
   {
     title: "Arroz Branco",
+  },
+  {
+    title: "Arroz Integral",
   },
   {
     title: "Arroz de Cenoura",
@@ -94,87 +77,103 @@ export const sides = [
   {
     title: "Feijão Verde",
   },
+  {
+    title: "Feijão Carioca",
+  },
+  {
+    title: "Vinagrete e Farofa",
+  },
 ];
 
 export const foodies = [
-{
-  title: "Omelete de queijo mussarela, tomate e orégano",
-  price: "12,90"
-},
-{
-  title: "Omelete misto de queijo e presunto",
-  price: "12,90"
-},
-{
-  title: "Omelete de frango",
-  price: "13,90"
-},
-{
-  title: "Tapioca de queijo coalho",
-  price: "8,90"
-},
-{
-  title: "Tapioca de Coco e queijo coalho",
-  price: "9,90"
-},
-{
-  title: "Tapioca de Frango com queijo coalho",
-  price: "10,90"
-},
-{
-  title: "Cuscuz com Charque e queijo",
-  price: "10,90"
-},
-{
-  title: "Cuscuz simples apenas com manteiga derretida",
-  price: "7,90"
-},
-{
-  title: "Cuscuz com charque",
-  price: "12,90"
-},
-{
-  title: "Cuscuz com ovo",
-  price: "10,90"
-},
-{
-  title: "Cuscuz a pizzaiolo com molho de tomate, queijo e orégano",
-  price: "12,90"
-},
-{
-  title: "Sanduíche misto de pão baguete",
-  price: "12,90"
-},
-{
-  title: "Sanduíche de queijo e salada em pão baguete",
-  price: "12,90"
-},
-{
-  title: "Sanduíche de frango com queijo e salada em pão baguete",
-  price: "15,90"
-},
-{
-  title: "Croissant Misto",
-  price: "7,90"
-},
-{
-  title: "Croissant de Frango",
-  price: "8,90"
-}
-
-]
+  {
+    title: "Omelete de queijo mussarela, tomate e orégano",
+    price: "12,90",
+  },
+  {
+    title: "Omelete misto de queijo e presunto",
+    price: "12,90",
+  },
+  {
+    title: "Omelete de frango",
+    price: "13,90",
+  },
+  {
+    title: "Tapioca de queijo coalho",
+    price: "8,90",
+  },
+  {
+    title: "Tapioca de Coco e queijo coalho",
+    price: "9,90",
+  },
+  {
+    title: "Tapioca de Frango com queijo coalho",
+    price: "10,90",
+  },
+  {
+    title: "Cuscuz com Charque e queijo",
+    price: "10,90",
+  },
+  {
+    title: "Cuscuz simples apenas com manteiga derretida",
+    price: "7,90",
+  },
+  {
+    title: "Cuscuz com charque",
+    price: "12,90",
+  },
+  {
+    title: "Cuscuz com ovo",
+    price: "10,90",
+  },
+  {
+    title: "Cuscuz a pizzaiolo com molho de tomate, queijo e orégano",
+    price: "12,90",
+  },
+  {
+    title: "Sanduíche misto de pão baguete",
+    price: "12,90",
+  },
+  {
+    title: "Sanduíche de queijo e salada em pão baguete",
+    price: "12,90",
+  },
+  {
+    title: "Sanduíche de frango com queijo e salada em pão baguete",
+    price: "15,90",
+  },
+  {
+    title: "Croissant Misto",
+    price: "7,90",
+  },
+  {
+    title: "Croissant de Frango",
+    price: "8,90",
+  },
+];
 
 export const saladas = [
   {
     title: "Salada de Frango",
-    desc: "Salada com mix de folhas, repolho roxo, cenoura ralada e tomate cereja acompanhada de peito de frango grelhado.",
-    price: "28,90"
+    price: "23,90",
   },
   {
     title: "Salada de Camarão",
-    desc: "Salada com mix de folhas, repolho roxo, cenoura ralada e tomate cereja acompanhada de camarões grelhados.",
-    price: "32,90"
+    price: "27,90",
   },
+];
 
-  
-]
+export const drinks = [
+  {
+    title: "Água (500ml)",
+    price: "3,00",
+  },
+  {
+    title: "Suco de Laranja Natural (500ml)",
+    price: "6,90",
+  },
+  {
+    title: "Refrigerante (Lata)",
+    price: "5,90",
+  },
+];
