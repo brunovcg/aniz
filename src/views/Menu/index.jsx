@@ -24,9 +24,16 @@ const Menu = () => {
         </div>
         <div className="box">
           <h2>Almoço</h2>
-          <p style={{ color: "white", marginTop: "10px", fontSize: "18px" }}>
-            *Escolha 2 acompanhamentos{" "}
-            <span style={{ fontSize: "12px" }}>
+          <p
+            style={{
+              color: "var(--light-yellow)",
+              marginTop: "10px",
+              fontSize: "18px",
+              textAlign: "center",
+            }}
+          >
+            *Escolha 2 acompanhamentos <br />
+            <span style={{ fontSize: "15px" }}>
               (exceto para o Espaguete à bolonhesa)
             </span>
           </p>
@@ -55,7 +62,16 @@ const Menu = () => {
               ))}
           </section>
           <h2>Saladas</h2>
-          <p style={{ color: "var(--light-green)", textAlign: "center",margin: "20px 20px 0px 20px"}}>
+          <p
+            className="desc"
+            style={{
+              color: "var(--light-green)",
+              fontWeight: "bold",
+              textAlign: "center",
+              fontSize: "15px",
+              margin: "20px 20px 0px 20px",
+            }}
+          >
             Salada com mix de folhas, repolho roxo, cenoura ralada, tomate
             cereja e torradinhas. Acompanha proteína a sua escolha:
           </p>
@@ -83,7 +99,6 @@ const Menu = () => {
                   {item.desc && <p className="desc">{item.desc}</p>}
                 </article>
               ))}
-
           </section>
 
           <h2>Bebidas</h2>
@@ -98,7 +113,6 @@ const Menu = () => {
                   {item.desc && <p className="desc">{item.desc}</p>}
                 </article>
               ))}
-
           </section>
         </div>
       </div>

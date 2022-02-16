@@ -53,19 +53,6 @@ export const itens = [
 
 export const sides = [
   {
-    title: "Salada Aniz",
-    desc: "Mix de folhas, cenoura ralada, repolho roxo, tomatinhos",
-  },
-  {
-    title: "Macarrão espaguete na manteiga",
-  },
-  {
-    title: "Purê de batata",
-  },
-  {
-    title: "Batata frita",
-  },
-  {
     title: "Arroz Branco",
   },
   {
@@ -75,11 +62,26 @@ export const sides = [
     title: "Arroz de Cenoura",
   },
   {
-    title: "Feijão Verde",
+    title: "Batata frita",
   },
   {
     title: "Feijão Carioca",
   },
+  {
+    title: "Feijão Verde",
+  },
+  {
+    title: "Macarrão espaguete na manteiga",
+  },
+
+  {
+    title: "Purê de batata",
+  },
+  {
+    title: "Salada Aniz",
+    desc: "(Mix de folhas, cenoura ralada, repolho roxo, tomatinhos)",
+  },
+
   {
     title: "Vinagrete e Farofa",
   },

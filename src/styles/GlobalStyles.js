@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
         --yellow: #E69C02;
         --light-yellow: #ffef84;
         --light-red: #A31A2E;
-        --light-green: #ceffa7;
+        --light-green: #a4cf85;
        
     }
 
