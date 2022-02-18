@@ -25,28 +25,28 @@ export const itens = [
     desc: "Filé de tilápia grelhado",
   },
   {
-    title: "Filé a parmegiana",
+    title: "Bife a parmegiana",
     price: "26,90",
     desc: "Filé empanado com molho de tomate",
   },
   {
-    title: "Filé ao molho de mostarda",
-    price: "31,90",
-    desc: "Filé grelhado, acompanhado de molho de mostarda",
+    title: "Bife ao molho de mostarda",
+    price: "27,90",
+    desc: "Bife grelhado, acompanhado de molho de mostarda",
   },
   {
     title: "Maminha grelhada",
-    price: "28,90",
+    price: "26,90",
     desc: "Maminha grelhada na chapa",
   },
   {
     title: "Carne de sol do sertão",
-    price: "29,90",
+    price: "26,90",
     desc: "Cubos de Carne de Sol acebolada",
   },
   {
     title: "Espaguete á bolonhesa",
-    price: "26,90",
+    price: "22,90",
     desc: "Massa ao molho de tomate e carne moída",
   },
 ];
@@ -56,19 +56,22 @@ export const sides = [
     title: "Arroz Branco",
   },
   {
-    title: "Arroz Integral",
+    title: "Arroz integral",
   },
   {
-    title: "Arroz de Cenoura",
+    title: "Arroz com brócolis",
+  },
+  {
+    title: "Arroz com cenoura",
   },
   {
     title: "Batata frita",
   },
   {
-    title: "Feijão Carioca",
+    title: "Feijão carioca",
   },
   {
-    title: "Feijão Verde",
+    title: "Feijão verde",
   },
   {
     title: "Macarrão espaguete na manteiga",
@@ -83,18 +86,18 @@ export const sides = [
   },
 
   {
-    title: "Vinagrete e Farofa",
+    title: "Vinagrete e farofa",
   },
 ];
 
 export const foodies = [
   {
     title: "Omelete de queijo mussarela, tomate e orégano",
-    price: "12,90",
+    price: "10,90",
   },
   {
     title: "Omelete misto de queijo e presunto",
-    price: "12,90",
+    price: "11,90",
   },
   {
     title: "Omelete de frango",
@@ -102,15 +105,15 @@ export const foodies = [
   },
   {
     title: "Tapioca de queijo coalho",
-    price: "8,90",
+    price: "6,90",
   },
   {
     title: "Tapioca de Coco e queijo coalho",
-    price: "9,90",
+    price: "7,90",
   },
   {
     title: "Tapioca de Frango com queijo coalho",
-    price: "10,90",
+    price: "9,90",
   },
   {
     title: "Cuscuz com Charque e queijo",
@@ -121,28 +124,24 @@ export const foodies = [
     price: "7,90",
   },
   {
-    title: "Cuscuz com charque",
-    price: "12,90",
+    title: "Cuscuz com ovo",
+    price: "8,90",
   },
   {
-    title: "Cuscuz com ovo",
+    title: "Cuscuz á pizzaiolo com molho de tomate, queijo e orégano",
     price: "10,90",
   },
   {
-    title: "Cuscuz a pizzaiolo com molho de tomate, queijo e orégano",
-    price: "12,90",
-  },
-  {
     title: "Sanduíche misto de pão baguete",
-    price: "12,90",
+    price: "8,90",
   },
   {
     title: "Sanduíche de queijo e salada em pão baguete",
-    price: "12,90",
+    price: "8,90",
   },
   {
     title: "Sanduíche de frango com queijo e salada em pão baguete",
-    price: "15,90",
+    price: "10,90",
   },
   {
     title: "Croissant Misto",
@@ -175,7 +174,27 @@ export const drinks = [
     price: "6,90",
   },
   {
+    title: "Suco de Laranja Natural (300ml)",
+    price: "5,00",
+  },
+  {
     title: "Refrigerante (Lata)",
     price: "5,90",
+  },
+  {
+    title: "Café Espresso",
+    price: "3,50",
+  },
+  {
+    title: "Café Espresso Duplo",
+    price: "6,50",
+  },
+  {
+    title: "Café com leite pequeno",
+    price: "4,50",
+  },
+  {
+    title: "Café com leite grande",
+    price: "7,50",
   },
 ];
