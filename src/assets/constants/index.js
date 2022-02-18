@@ -25,7 +25,7 @@ export const itens = [
     desc: "Filé de tilápia grelhado",
   },
   {
-    title: "Bife a parmegiana",
+    title: "Bife à parmegiana",
     price: "26,90",
     desc: "Filé empanado com molho de tomate",
   },
@@ -45,7 +45,7 @@ export const itens = [
     desc: "Cubos de Carne de Sol acebolada",
   },
   {
-    title: "Espaguete á bolonhesa",
+    title: "Espaguete à bolonhesa",
     price: "22,90",
     desc: "Massa ao molho de tomate e carne moída",
   },
