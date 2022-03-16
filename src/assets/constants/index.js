@@ -2,7 +2,7 @@ export const MENU = [
   {
     id: 1,
     category: "Almoço",
-    description: "Escolha 2 acompanhamentos - (Exceto Lasanha à Bolonhesa)",
+    description: "Escolha 2 acompanhamentos - (Exceto Espaguete à Bolonhesa)",
     active: true,
     items: [
       {
@@ -287,7 +287,7 @@ export const MENU = [
     items: [
       {
         id: 1,
-        title: "Bolos de Cenoura",
+        title: "Bolos",
         desc: "Escolha o sabor: Cenoura, Brigadeiro, Laranja, Churros",
         price: "6,00",
         active: true,
@@ -342,7 +342,7 @@ export const MENU = [
     id: 7,
     category: "Bebidas",
     active: true,
-    description: "Escolha 2 acompanhamentos",
+    description: "",
     items: [
       {
         id: 1,
