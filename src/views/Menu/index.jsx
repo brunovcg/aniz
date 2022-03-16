@@ -1,10 +1,15 @@
 import Styled from "./styles";
 import logo from "../../assets/images/logo.png";
 import { FaInstagram } from "react-icons/fa";
-
-import { itens, sides, foodies, saladas, drinks } from "../../assets/constants";
+import { useMenu } from "../../provider/menuProvider";
+import Button from "../../components/Button";
+import { useNavigate } from "react-router-dom";
 
 const Menu = () => {
+  const { menu } = useMenu();
+
+  const navigate = useNavigate();
+
   return (
     <Styled>
       <div className="transparent">
@@ -23,99 +28,36 @@ const Menu = () => {
           </div>
         </div>
         <div className="box">
-          <h2>Almoço</h2>
-          <p
-            style={{
-              color: "var(--light-yellow)",
-              marginTop: "10px",
-              fontSize: "18px",
-              textAlign: "center",
-            }}
-          >
-            *Escolha 2 acompanhamentos <br />
-            <span style={{ fontSize: "15px" }}>
-              (exceto para o Espaguete à bolonhesa)
-            </span>
-          </p>
-          <section>
-            {itens &&
-              itens.map((item, index) => (
-                <article key={index}>
+          {menu.map((category) => (
+            <section key={category.id}>
+              <div className="category-title-description">
+                <h2 className="category-title">{category.category}</h2>
+                {category?.description && (
+                  <p className="category-description">{category.description}</p>
+                )}
+              </div>
+              {category.items.map((item) => (
+                <article key={category.category + item.id}>
                   <div className="title-price">
                     <div className="title">{item.title}</div>
-                    <div className="price">R$ {item.price}</div>
+                    <div className="price">
+                      {item.price ? "R$ " + item.price : ""}
+                    </div>
                   </div>
                   <p className="desc">{item.desc}</p>
                 </article>
               ))}
-          </section>
-          <h2>Acompanhamentos</h2>
-          <section>
-            {sides &&
-              sides.map((item, index) => (
-                <article key={index}>
-                  <div className="title-price">
-                    <div>{item.title}</div>
-                  </div>
-                  {item.desc && <p className="desc">{item.desc}</p>}
-                </article>
-              ))}
-          </section>
-          <h2>Saladas</h2>
-          <p
-            className="desc"
-            style={{
-              color: "var(--light-green)",
-              fontWeight: "bold",
-              textAlign: "center",
-              fontSize: "15px",
-              margin: "20px 20px 0px 20px",
-            }}
-          >
-            Salada com mix de folhas, repolho roxo, cenoura ralada, tomate
-            cereja e torradinhas. Acompanha proteína a sua escolha:
-          </p>
-          <section>
-            {saladas &&
-              saladas.map((item, index) => (
-                <article key={index}>
-                  <div className="title-price">
-                    <div>{item.title}</div>
-                    <div className="price">R$ {item.price}</div>
-                  </div>
-                  {item.desc && <p className="desc">{item.desc}</p>}
-                </article>
-              ))}
-          </section>
-          <h2>Salgados</h2>
-          <section>
-            {foodies &&
-              foodies.map((item, index) => (
-                <article key={index}>
-                  <div className="title-price">
-                    <div>{item.title}</div>
-                    <div className="price">R$ {item.price}</div>
-                  </div>
-                  {item.desc && <p className="desc">{item.desc}</p>}
-                </article>
-              ))}
-          </section>
-
-          <h2>Bebidas</h2>
-          <section>
-            {drinks &&
-              drinks.map((item, index) => (
-                <article key={index}>
-                  <div className="title-price">
-                    <div>{item.title}</div>
-                    <div className="price">R$ {item.price}</div>
-                  </div>
-                  {item.desc && <p className="desc">{item.desc}</p>}
-                </article>
-              ))}
-          </section>
+            </section>
+          ))}
         </div>
       </div>
+
+      <details className="management">
+        <summary>...</summary>
+        <div className="button-box">
+          <Button onClick={() => navigate("/login")}>Área Restrita</Button>
+        </div>
+      </details>
     </Styled>
   );
 };

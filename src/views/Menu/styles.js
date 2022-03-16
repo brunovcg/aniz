@@ -1,22 +1,18 @@
-import logo from "../../assets/images/fundo.jpg";
+import { configs } from "../../configs";
 import styled from "styled-components";
 
 const Styled = styled.div`
-  background-image: url(${logo});
+  background-image: url(${configs.backgroundImage});
   background-repeat: repeat;
   background-size: 100vw auto;
   background-attachment: scroll;
-
-  /* background: #232526;  
-  background: -webkit-linear-gradient(to right, #414345, #232526); 
-  background: linear-gradient(to right, #414345, #232526);  */
 
   width: 100%;
 
   .transparent {
     width: 100%;
     min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.65);
+    /* background-color: rgba(0, 0, 0, 0.65); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,16 +81,36 @@ const Styled = styled.div`
         width: 95%;
       }
 
-      h2 {
-        color: var(--white);
-        background: var(--light-red);
-        padding: 5px 30px;
-        border-radius: 20px;
-        margin: 40px 0 0 0;
-      }
-
       section {
         width: 100%;
+
+        .category-title-description {
+          width: 100%;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          .category-title {
+            color: var(--white);
+            background: var(--light-red);
+            padding: 5px 30px;
+            border-radius: 20px;
+            margin: 40px 0 0 0;
+            width: fit-content;
+          }
+
+          .category-description {
+            margin-top: 20px;
+            font-size: 24px;
+            color: var(--white);
+            text-align: center;
+
+            @media (max-width: 768px) {
+              width: 90%;
+            }
+          }
+        }
 
         article {
           margin: 25px 30px;
@@ -137,6 +153,22 @@ const Styled = styled.div`
           }
         }
       }
+    }
+  }
+
+  .management {
+    width: 100%;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+
+    .button-box {
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
   }
 `;
