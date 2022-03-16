@@ -103,7 +103,7 @@ const Styled = styled.div`
           .category-description {
             margin-top: 20px;
             font-size: 24px;
-            color: var(--white);
+            color: var(--yellow);
             text-align: center;
 
             @media (max-width: 768px) {
