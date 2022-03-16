@@ -12,7 +12,7 @@ const Styled = styled.div`
   .transparent {
     width: 100%;
     min-height: 100vh;
-    /* background-color: rgba(0, 0, 0, 0.65); */
+    background-color: rgba(0, 0, 0, 0.65);
     display: flex;
     flex-direction: column;
     align-items: center;
