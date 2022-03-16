@@ -1,10 +1,10 @@
-const Button = ({ children, ...rest }) => {
+const Button = ({ color, backgroundColor, children, ...rest }) => {
   return (
     <button
       style={{
         padding: "7px",
-        backgroundColor: "var(--light-red)",
-        color: "var(--white)",
+        backgroundColor: backgroundColor ? backgroundColor:"var(--light-red)",
+        color: color? color: "var(--white)",
         fontWeight: "bold"
        
       }}

@@ -1,9 +1,10 @@
 import Styled from "./styles";
 
-const Input = ({ ...rest }) => {
+const Input = ({error, ...rest }) => {
   return (
-    <Styled>
+    <Styled error={error}>
       <input {...rest} />
+      <div>{error}</div>
     </Styled>
   );
 };

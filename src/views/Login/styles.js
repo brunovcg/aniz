@@ -17,18 +17,26 @@ const Styled = styled.div`
     flex-direction: column;
     align-items: center;
     padding-top: 50px;
-  
+
+    .header{
+      width: 100%;
+      padding: 0 50px;
+
+      display: flex;
+      justify-content: end;
+    }
 
     h2 {
-      color: var(--white);
+      color: var(--yellow);
+
+      font-size: 40px;
     }
 
     .login-box {
-      
       width: 100%;
       margin-bottom: 50px;
       display: flex;
-       justify-content: center;
+      justify-content: center;
       .input-box {
         display: flex;
         flex-direction: column;

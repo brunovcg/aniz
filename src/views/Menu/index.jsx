@@ -51,7 +51,7 @@ const Menu = () => {
           ))}
         </div>
         <details className="management">
-        <summary>...</summary>
+        <summary>Aniz Restaurante</summary>
         <div className="button-box">
           <Button onClick={() => navigate("/login")}>Área Restrita</Button>
         </div>

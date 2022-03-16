@@ -23,35 +23,49 @@ const Login = () => {
         setUsername({...password, error: true})
       }
 
-      console.log({username: username.text, password: password.text})
+      if (password.text && username.text){
+
+        console.log({username: username.text, password: password.text})
+
+        navigate("/manager")
+
+      }
+
+      
+
+      
   };
 
   return (
     <Styled>
+      
       <div className="transparent">
+        <div className="header">
+        <Button onClick={()=> navigate("/")}>VOLTAR</Button>
+        </div>
         <h2>LOGIN</h2>
 
         <div className="login-box">
           <div className="input-box">
             <Input
-              placeholder="digite seu usuário"
+              placeholder="digite o usuário"
               onChange={(evt) => setUsername({...username, text: evt.target.value})}
               type="text"
-              error= {username.error ? "Usuário Necessário" : ""}
+              error= {username.error ? "Usuário necessário" : ""}
             />
 
             <Input
-              placeholder="digite sua senha"
+              placeholder="digite a senha"
               type="password"
               onChange={(evt) => setPassword({...password, text: evt.target.value})}
-              error= {username.error ? "Senha Necessária" : ""}
+              error= {username.error ? "Senha necessária" : ""}
             />
 
             <Button onClick={handleSubmit}>LOGIN</Button>
           </div>
         </div>
 
-        <Button onClick={()=> navigate("/")}>VOLTAR</Button>
+        
       </div>
     </Styled>
   );
