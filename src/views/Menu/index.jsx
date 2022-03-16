@@ -28,37 +28,41 @@ const Menu = () => {
           </div>
         </div>
         <div className="box">
-          {menu.map((category) => (
-            <section key={category.id}>
-              <div className="category-title-description">
-                <h2 className="category-title">{category.category}</h2>
-                {category?.description && (
-                  <p className="category-description">{category.description}</p>
-                )}
-              </div>
-              {category.items.map((item) => (
-                <article key={category.category + item.id}>
-                  <div className="title-price">
-                    <div className="title">{item.title}</div>
-                    <div className="price">
-                      {item.price ? "R$ " + item.price : ""}
-                    </div>
-                  </div>
-                  <p className="desc">{item.desc}</p>
-                </article>
-              ))}
-            </section>
-          ))}
+          {menu
+            .filter((item) => item.active)
+            .map((category) => (
+              <section key={category.id}>
+                <div className="category-title-description">
+                  <h2 className="category-title">{category.category}</h2>
+                  {category?.description && (
+                    <p className="category-description">
+                      {category.description}
+                    </p>
+                  )}
+                </div>
+                {category.items
+                  .filter((item) => item.active)
+                  .map((item) => (
+                    <article key={category.category + item.id}>
+                      <div className="title-price">
+                        <div className="title">{item.title}</div>
+                        <div className="price">
+                          {item.price ? "R$ " + item.price : ""}
+                        </div>
+                      </div>
+                      <p className="desc">{item.desc}</p>
+                    </article>
+                  ))}
+              </section>
+            ))}
         </div>
         <details className="management">
-        <summary>Aniz Restaurante</summary>
-        <div className="button-box">
-          <Button onClick={() => navigate("/login")}>Área Restrita</Button>
-        </div>
-      </details>
+          <summary>Aniz Restaurante</summary>
+          <div className="button-box">
+            <Button onClick={() => navigate("/login")}>Área Restrita</Button>
+          </div>
+        </details>
       </div>
-
-     
     </Styled>
   );
 };

@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
         --light-yellow: #ffef84;
         --light-red: #A31A2E;
         --light-green: #a4cf85;
+        --light-grey: #e2e2e2;
        
     }
 
