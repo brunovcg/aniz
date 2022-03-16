@@ -1,4 +1,14 @@
-const Button = ({ color, backgroundColor, disabled, children, width, ...rest }) => {
+const Button = ({
+  color,
+  backgroundColor,
+  disabled,
+  children,
+  fontSize,
+  height,
+  width,
+  margin,
+  ...rest
+}) => {
   return (
     <button
       style={{
@@ -10,7 +20,10 @@ const Button = ({ color, backgroundColor, disabled, children, width, ...rest }) 
           : "var(--light-red)",
         color: color ? color : "var(--white)",
         fontWeight: "bold",
-        width: width && width 
+        width: width && width,
+        height: height && height,
+        fontSize: fontSize && fontSize,
+        margin: margin && margin,
       }}
       disabled={disabled}
       {...rest}
