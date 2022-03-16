@@ -50,14 +50,15 @@ const Menu = () => {
             </section>
           ))}
         </div>
-      </div>
-
-      <details className="management">
+        <details className="management">
         <summary>...</summary>
         <div className="button-box">
           <Button onClick={() => navigate("/login")}>Área Restrita</Button>
         </div>
       </details>
+      </div>
+
+     
     </Styled>
   );
 };
