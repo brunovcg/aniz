@@ -25,8 +25,8 @@ const Manager = () => {
           Adicionar Categoria
         </Button>
 
-        {menu.map((category) => (
-          <Category key={category.id} category={category} />
+        {menu.map((category, index) => (
+          <Category key={category.id} category={category} index={index} menuLength={menu.length}/>
         ))}
       </div>
     </Styled>

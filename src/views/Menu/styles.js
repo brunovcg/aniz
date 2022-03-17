@@ -93,7 +93,7 @@ const Styled = styled.div`
           justify-content: center;
           .category-title {
             color: var(--white);
-            background: var(--light-red);
+            background: var(--red);
             padding: 5px 30px;
             border-radius: 20px;
             margin: 40px 0 0 0;

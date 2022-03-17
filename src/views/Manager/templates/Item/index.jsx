@@ -1,17 +1,15 @@
-import { FaArrowUp, FaArrowDown, FaPlus } from "react-icons/fa";
+import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 import { useState } from "react";
 import DivInput from "../../../../components/DivInput";
 import Button from "../../../../components/Button";
 import Styled from "./styles";
 
-const Item = ({ item }) => {
+const Item = ({ item, index, itemsLength }) => {
   const [disabled, setDisabled] = useState(false);
-
 
   const handleDisable = () => {
     setDisabled(!disabled);
   };
-
 
   return (
     <Styled>
@@ -24,11 +22,17 @@ const Item = ({ item }) => {
         >
           {disabled ? "Ativar" : "Desativar"}
         </Button>
-      
-        <Button backgroundColor="var(--blue)">
+
+        <Button
+          backgroundColor="var(--blue)"
+          disabled={index === 0 ? true : false}
+        >
           <FaArrowUp />
         </Button>
-        <Button backgroundColor="var(--blue)">
+        <Button
+          backgroundColor="var(--blue)"
+          disabled={index === itemsLength - 1 ? true : false}
+        >
           <FaArrowDown />
         </Button>
       </div>
@@ -46,7 +50,6 @@ const Item = ({ item }) => {
           disabled={disabled}
           type="textarea"
           height="60px"
-          fontSize="14px"
           value={item?.desc}
         />
       </div>

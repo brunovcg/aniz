@@ -6,7 +6,7 @@ import { useState } from "react";
 
 import DivInput from "../../../../components/DivInput";
 
-const Category = ({ category }) => {
+const Category = ({ category, index, menuLength }) => {
   const [disabled, setDisabled] = useState(false);
 
   const handleDisable = () => {
@@ -15,18 +15,8 @@ const Category = ({ category }) => {
 
   return (
     <Styled disabled={disabled}>
-
-      <h2>Category</h2>
-      <div className="title-buttons">
-        <div className="div-input-box">
-          <DivInput
-            disabled={disabled}
-            fontSize="18px"
-            value={category?.category}
-            color="var(--light-red)"
-          />
-        </div>
-
+      <div className="header">
+        <h2>Category - {index + 1}</h2>
         <div className="buttons">
           <Button>Excluir</Button>
           <Button
@@ -39,12 +29,29 @@ const Category = ({ category }) => {
           <Button disabled={disabled} backgroundColor="var(--light-green)">
             <FaPlus /> Item
           </Button>
-          <Button disabled={disabled} backgroundColor="var(--blue)">
+          <Button
+            disabled={index === 0 ? true : disabled}
+            backgroundColor="var(--blue)"
+          >
             <FaArrowUp />
           </Button>
-          <Button disabled={disabled} backgroundColor="var(--blue)">
+          <Button
+            disabled={index === menuLength - 1 ? true : disabled}
+            backgroundColor="var(--blue)"
+          >
             <FaArrowDown />
           </Button>
+        </div>
+      </div>
+
+      <div className="title-buttons">
+        <div className="div-input-box">
+          <DivInput
+            disabled={disabled}
+            fontSize="18px"
+            value={category?.category}
+            color="var(--red)"
+          />
         </div>
       </div>
 
@@ -53,14 +60,14 @@ const Category = ({ category }) => {
           style={{
             fontWeight: "bold",
             fontSize: "20px",
-            color: disabled ? "var(--grey)" : "var(--light-red)",
+            color: disabled ? "var(--grey)" : "var(--blue)",
           }}
         >
           Descrição
         </div>
 
         <DivInput
-        type="textarea"
+          type="textarea"
           height="80px"
           disabled={disabled}
           fontSize="16px"
@@ -68,11 +75,16 @@ const Category = ({ category }) => {
         />
       </div>
 
-
       <div className="category-box">
-        {!disabled && category?.items.map((item) => (
-          <Item key={item.id} item={item} />
-        ))}
+        {!disabled &&
+          category?.items.map((item, index) => (
+            <Item
+              key={item.id}
+              item={item}
+              index={index}
+              itemsLength={category.items.length}
+            />
+          ))}
       </div>
     </Styled>
   );

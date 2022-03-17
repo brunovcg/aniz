@@ -17,7 +17,7 @@ const Button = ({
           ? "var(--grey)"
           : backgroundColor
           ? backgroundColor
-          : "var(--light-red)",
+          : "var(--red)",
         color: color ? color : "var(--white)",
         fontWeight: "bold",
         width: width && width,
