@@ -4,7 +4,10 @@ import Styled from "./styles";
 import { FaTimes, FaCheck, FaEdit } from "react-icons/fa";
 
 const DivInput = React.forwardRef(
-  ({ value, edit, fontSize, fontFamily, disabled }, ref) => {
+  (
+    { value, edit, fontSize, height, fontFamily, disabled, color, type = "input" },
+    ref
+  ) => {
     const [show, setShow] = useState(edit);
     const [inputValue, setInputValue] = useState(value);
 
@@ -22,10 +25,18 @@ const DivInput = React.forwardRef(
         fontFamily={fontFamily}
         show={show}
         disabled={disabled}
+        height={height}
+        color={color}
       >
         <div className="input-div">
-          {show ? (
+          {show && type === "input" ? (
             <input
+              className="input-change"
+              value={inputValue}
+              onChange={(evt) => setInputValue(evt.target.value)}
+            />
+          ) : show && type === "textarea" ? (
+            <textarea
               className="input-change"
               value={inputValue}
               onChange={(evt) => setInputValue(evt.target.value)}
@@ -37,7 +48,7 @@ const DivInput = React.forwardRef(
         <div className="button-box">
           {!show && (
             <Button
-            disabled={disabled}
+              disabled={disabled}
               backgroundColor="var(--yellow)"
               onClick={() => setShow(true)}
             >

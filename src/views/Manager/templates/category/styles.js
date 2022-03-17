@@ -5,6 +5,10 @@ const Styled = styled.div`
   border: 1px solid black;
   padding: 15px;
   width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -12,9 +16,10 @@ const Styled = styled.div`
   }
 
   .title-buttons {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    margin: 20px 0 40px 0;
+    justify-content: space-between;
+    margin: 10px 0;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -49,6 +54,22 @@ const Styled = styled.div`
         height: 40px;
       }
     }
+  }
+
+  .description{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+    background-color: white;
+    align-items: center;
+ 
+  }
+
+  .category-box{
+    width: 100%;
+
   }
 `;
 

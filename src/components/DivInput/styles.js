@@ -2,13 +2,12 @@ import styled from "styled-components";
 
 const Styled = styled.div`
   display: flex;
-
-  height: 60px;
-  justify-content: center;
-  background-color: var(--light-grey);
+  height: ${(props) => (props.height ? props.height : "60px")};
+  justify-content: start;
   border: ${(props) => (props.show ? "1px dotted black" : "none")};
   width: 100%;
   padding: 10px 3px;
+  background-color: white;
 
   .input-div {
     display: flex;
@@ -21,18 +20,17 @@ const Styled = styled.div`
     }
 
     .input-change {
-      height: 60%;
+      height: 80%;
       padding-left: 5px;
       width: 100%;
-      font-size: 20px;
-
-    
+      font-size: 16px;
     }
 
     .show-div {
-      color: ${props=> props.disabled && "var(--grey)"};
+      color: ${(props) =>
+        props.disabled ? "var(--grey)" : props.color && props.color};
       font-weight: bold;
-      font-size: ${(props) => (props.fontSize ? props.fontSize : "20px")};
+      font-size: ${(props) => (props.fontSize ? props.fontSize : "16px")};
       font-family: ${(props) =>
         props.fontFamily ? props.fontFamily : "arial"};
     }

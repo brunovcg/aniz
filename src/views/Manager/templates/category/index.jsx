@@ -14,20 +14,23 @@ const Category = ({ category }) => {
   };
 
   return (
-    <Styled>
+    <Styled disabled={disabled}>
+
+      <h2>Category</h2>
       <div className="title-buttons">
         <div className="div-input-box">
           <DivInput
             disabled={disabled}
-            fontSize="30px"
+            fontSize="18px"
             value={category?.category}
+            color="var(--light-red)"
           />
         </div>
 
         <div className="buttons">
           <Button>Excluir</Button>
           <Button
-          width="80px"
+            width="80px"
             backgroundColor={disabled ? "var(--light-green)" : "var(--yellow)"}
             onClick={handleDisable}
           >
@@ -45,11 +48,30 @@ const Category = ({ category }) => {
         </div>
       </div>
 
-      <h3>{category?.description}</h3>
+      <div className="description">
+        <div
+          style={{
+            fontWeight: "bold",
+            fontSize: "20px",
+            color: disabled ? "var(--grey)" : "var(--light-red)",
+          }}
+        >
+          Descrição
+        </div>
 
-      <div>
-        {category?.items.map((item) => (
-          <Item disabled={disabled} key={item.id} item={item} />
+        <DivInput
+        type="textarea"
+          height="80px"
+          disabled={disabled}
+          fontSize="16px"
+          value={category?.description}
+        />
+      </div>
+
+
+      <div className="category-box">
+        {!disabled && category?.items.map((item) => (
+          <Item key={item.id} item={item} />
         ))}
       </div>
     </Styled>
