@@ -8,7 +8,7 @@ const MenuContext = createContext([]);
 const initialCategory = {
   id: 0,
   categoryId: "",
-  category: "",
+  category: "Nova Categoria",
   description: "",
   active: true,
   position: 0,

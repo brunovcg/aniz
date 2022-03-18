@@ -5,14 +5,13 @@ const { mobileBreakpoint } = configs;
 
 const Styled = styled.div`
   margin: 15px 0;
-  border: 1px solid black;
   padding: 15px;
   width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--grey);
+  /* background-color: var(--grey); */
 
   @media (max-width: ${`${mobileBreakpoint}px`}) {
     width: 100%;
@@ -30,9 +29,8 @@ const Styled = styled.div`
       align-items: center;
       margin: 10px 0;
       width: 50%;
-      background-color: black;
+      background-color: var(--dark-grey);
       justify-content: space-around;
-      border: 1px black solid;
       padding: 5px 0;
 
       @media (max-width: ${`${mobileBreakpoint}px`}) {
@@ -57,7 +55,7 @@ const Styled = styled.div`
     }
 
     .div-input-box {
-      width: 40%;
+      width: 60%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -72,13 +70,35 @@ const Styled = styled.div`
     justify-content: center;
     width: 100%;
     flex-direction: column;
-    padding: 0px 5px;
     background-color: white;
     align-items: center;
+
+    .description-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+      background-color: var(--blue);
+      width: 100%;
+      color: var(--white);
+    }
   }
 
-  .category-box {
+  .itens-box {
     width: 100%;
+    margin-top: 20px;
+
+    .itens-label {
+      background-color: var(--blue);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: var(--white);
+    }
   }
 `;
 

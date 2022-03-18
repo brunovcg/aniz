@@ -1,7 +1,7 @@
 import Button from "../Button";
 import React, { useImperativeHandle, useState } from "react";
 import Styled from "./styles";
-import { FaTimes, FaCheck, FaEdit } from "react-icons/fa";
+import { FaCheck, FaEdit, FaUndo } from "react-icons/fa";
 
 const DivInput = React.forwardRef(
   (
@@ -16,27 +16,25 @@ const DivInput = React.forwardRef(
       type = "input",
       onClick,
       index,
-      keyValue
+      keyValue,
     },
     ref
   ) => {
     const [show, setShow] = useState(edit);
     const [inputValue, setInputValue] = useState(value);
-    
 
     useImperativeHandle(ref, () => {
       return { show, inputValue };
     });
 
     const save = () => {
-      onClick(index,keyValue,inputValue)
+      onClick(index, keyValue, inputValue);
       setShow(false);
     };
 
     const cancel = () => {
-        setInputValue(value)
-
-    }
+      setInputValue(value);
+    };
 
     return (
       <Styled
@@ -72,17 +70,19 @@ const DivInput = React.forwardRef(
               disabled={disabled}
               backgroundColor="var(--yellow)"
               onClick={() => setShow(true)}
+              fontSize="30px"
+              circle
             >
               <FaEdit />
             </Button>
           )}
           {show && (
-            <Button onClick={cancel}>
-              <FaTimes />
+            <Button onClick={cancel} circle>
+              <FaUndo />
             </Button>
           )}
           {show && (
-            <Button backgroundColor="var(--light-green)" onClick={save}>
+            <Button backgroundColor="var(--light-green)" circle onClick={save}>
               <FaCheck />
             </Button>
           )}

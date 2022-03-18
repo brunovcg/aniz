@@ -21,6 +21,7 @@ const Manager = () => {
           height="40px"
           fontSize="20px"
           margin="0 50px"
+          circle
           onClick={() => logout()}
         >
           <FaSignOutAlt />
@@ -40,8 +41,8 @@ const Manager = () => {
           Component={Category}
           idKey={"categoryId"}
           titleKey={"category"}
+          backgroundColor="var(--grey)"
         />
-   
       </div>
     </Styled>
   );

@@ -3,6 +3,7 @@ import Button from "../../components/Button";
 import Input from "../../components/Input";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaArrowAltCircleLeft, FaCheck } from "react-icons/fa";
 
 const Login = () => {
   const [username, setUsername] = useState({ text: "", error: false });
@@ -29,7 +30,7 @@ const Login = () => {
     <Styled>
       <div className="transparent">
         <div className="header">
-          <Button onClick={() => navigate("/")}>VOLTAR</Button>
+          <Button onClick={() => navigate("/")} circle width="60px" height="60px" fontSize="30px"><FaArrowAltCircleLeft/></Button>
         </div>
         <h2>LOGIN</h2>
 
@@ -56,9 +57,12 @@ const Login = () => {
             <Button
               backgroundColor="var(--light-green)"
               width="80px"
+              height="80px"
               onClick={handleSubmit}
+              fontSize="50px"
+              circle
             >
-              LOGIN
+              <FaCheck/>
             </Button>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import Button from "../../../../components/Button";
 import Item from "../Item";
+import AccordionCustom from "../../../../components/AccordionCustom";
 import Styled from "./styles";
 import {
   FaArrowUp,
@@ -8,16 +9,13 @@ import {
   FaPowerOff,
   FaTrash,
 } from "react-icons/fa";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { useMenu } from "../../../../provider/menuProvider";
 import DivInput from "../../../../components/DivInput";
 
-const Category = React.forwardRef(({ category, index, menuLength }, ref) => {
+const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
   const { removeCategory, moveCategory, toogleCategoryStatus, modifyCategory } =
     useMenu();
-
-  const titleRef = useRef(null);
-  const descRef = useRef(null);
 
   const [disabled, setDisabled] = useState(false);
 
@@ -32,11 +30,13 @@ const Category = React.forwardRef(({ category, index, menuLength }, ref) => {
         <div className="buttons">
           <Button
             width="40px"
-            onClick={() => removeCategory(category.categoryId)}
+            circle
+            onClick={() => removeCategory(item.categoryId)}
           >
             <FaTrash />
           </Button>
           <Button
+            circle
             width="40px"
             backgroundColor={disabled ? "var(--light-green)" : "var(--yellow)"}
             onClick={() => handleDisable(index)}
@@ -49,13 +49,17 @@ const Category = React.forwardRef(({ category, index, menuLength }, ref) => {
           <Button
             disabled={index === 0 && true}
             backgroundColor="var(--blue)"
+            circle
+            width="40px"
             onClick={() => moveCategory(index, "up")}
           >
             <FaArrowUp />
           </Button>
           <Button
-            disabled={index === menuLength - 1 && true}
+            disabled={index === itemsLength - 1 && true}
             backgroundColor="var(--blue)"
+            circle
+            width="40px"
             onClick={() => moveCategory(index, "down")}
           >
             <FaArrowDown />
@@ -68,7 +72,7 @@ const Category = React.forwardRef(({ category, index, menuLength }, ref) => {
           <DivInput
             disabled={disabled}
             fontSize="18px"
-            value={category?.category}
+            value={item?.category}
             color="var(--red)"
             onClick={modifyCategory}
             keyValue="category"
@@ -78,39 +82,32 @@ const Category = React.forwardRef(({ category, index, menuLength }, ref) => {
       </div>
 
       <div className="description">
-        <div
-          style={{
-            fontWeight: "bold",
-            fontSize: "20px",
-            color: disabled ? "var(--grey)" : "var(--blue)",
-          }}
-        >
-          Descrição
-        </div>
+        <div className="description-label">DESCRIÇÃO</div>
 
         <DivInput
           type="textarea"
           height="80px"
           disabled={disabled}
           fontSize="16px"
-          value={category?.description}
+          value={item?.description}
           onClick={modifyCategory}
           keyValue="desc"
           index={index}
         />
       </div>
 
-      <div className="category-box">
-        {!disabled &&
-          category?.items.map((item, index) => (
-            <Item
-              key={item.itemId}
-              item={item}
-              index={index}
-              itemsLength={category.items.length}
-            />
-          ))}
-      </div>
+      {!disabled && <div className="itens-box">
+        <div className="itens-label">ITENS</div>
+        <AccordionCustom
+          fontFamily="arial"
+          fontSize="16px"
+          list={item?.items}
+          Component={Item}
+          idKey={"itemId"}
+          titleKey={"title"}
+          backgroundColor="var(--grey)"
+        />
+      </div>}
     </Styled>
   );
 });

@@ -1,17 +1,14 @@
 import styled from "styled-components";
 import {configs} from "../../../../configs"
-
 const {mobileBreakpoint} = configs
-
 
 const Styled = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
   margin: 20px 0;
-  border: 2px dotted black;
-  padding: 5px;
-  background-color: var(--dark-grey);
+  padding: 0 20px;
+
 
   .buttons {
     margin: 5px 0;
@@ -42,7 +39,7 @@ const Styled = styled.div`
     .price {
       width: 30%;
 
-      @media (max-width: ${`${mobileBreakpoint}px`}x) {
+      @media (max-width: ${`${mobileBreakpoint}px`}) {
         margin-top: 5px;
         width: 100%;
       }

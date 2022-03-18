@@ -7,7 +7,7 @@ const Styled = styled.div`
   border: ${(props) => (props.show ? "1px dotted black" : "none")};
   width: 100%;
   padding: 2px 3px;
-  background-color: white;
+  background-color: ${(props) => (props.show ? "var(--white)" : "var(--light-grey)")};;
 
   .input-div {
     display: flex;
@@ -24,6 +24,7 @@ const Styled = styled.div`
     }
 
     .show-div {
+      padding-left: 5px;
       color: ${(props) =>
         props.disabled ? "var(--grey)" : props.color && props.color};
       font-size: ${(props) => (props.fontSize ? props.fontSize : "12px")};

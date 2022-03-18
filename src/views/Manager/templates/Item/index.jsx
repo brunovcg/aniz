@@ -1,4 +1,4 @@
-import { FaArrowUp, FaArrowDown } from "react-icons/fa";
+import { FaArrowUp, FaArrowDown, FaPowerOff, FaTrash } from "react-icons/fa";
 import { useState } from "react";
 import DivInput from "../../../../components/DivInput";
 import Button from "../../../../components/Button";
@@ -14,22 +14,29 @@ const Item = ({ item, index, itemsLength }) => {
   return (
     <Styled>
       <div className="buttons">
-        <Button>Excluir</Button>
+        <Button circle width="40px" height="40px"><FaTrash/></Button>
         <Button
-          width="80px"
+          width="40px"
           backgroundColor={disabled ? "var(--light-green)" : "var(--yellow)"}
           onClick={handleDisable}
+          circle
         >
-          {disabled ? "Ativar" : "Desativar"}
+          <FaPowerOff />
         </Button>
 
         <Button
           backgroundColor="var(--blue)"
+          circle
+          height="40px"
+          width="40px"
           disabled={index === 0 ? true : false}
         >
           <FaArrowUp />
         </Button>
         <Button
+          circle
+          height="40px"
+          width="40px"
           backgroundColor="var(--blue)"
           disabled={index === itemsLength - 1 ? true : false}
         >

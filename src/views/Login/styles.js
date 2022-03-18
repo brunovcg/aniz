@@ -20,7 +20,7 @@ const Styled = styled.div`
 
     .header {
       width: 100%;
-      padding: 0 50px;
+      padding: 0 50px 30px 0;
 
       display: flex;
       justify-content: end;

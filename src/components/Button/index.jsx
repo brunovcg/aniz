@@ -7,6 +7,7 @@ const Button = ({
   height,
   width,
   margin,
+  circle,
   ...rest
 }) => {
   return (
@@ -24,6 +25,10 @@ const Button = ({
         height: height && height,
         fontSize: fontSize && fontSize,
         margin: margin && margin,
+        borderRadius: circle && "50%",
+        display: "flex", 
+        alignItems: "center",
+        justifyContent: "center"
       }}
       disabled={disabled}
       {...rest}
