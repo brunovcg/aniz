@@ -1,7 +1,6 @@
-import {configs} from "../../configs"
+import { configs } from "../../configs";
 import styled from "styled-components";
-const {mobileBreakpoint} = configs
-
+const { mobileBreakpoint } = configs;
 
 const Styled = styled.div`
   background-image: url(${configs.backgroundImage});

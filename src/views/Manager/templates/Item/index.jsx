@@ -4,12 +4,13 @@ import DivInput from "../../../../components/DivInput";
 import Button from "../../../../components/Button";
 import Styled from "./styles";
 import { useMenu } from "../../../../provider/menuProvider";
+import { useModal } from "../../../../provider/modal";
 
 const Item = ({ item, index, itemsLength, categoryIndex }) => {
   const [disabled, setDisabled] = useState(false);
 
   const { toogleItemStatus, moveItem, removeItem, modifyItem } = useMenu();
-
+  const { openModal, modalReset } = useModal();
   const titleRef = useRef(null);
   const priceRef = useRef(null);
   const descriptionRef = useRef(null);
@@ -30,7 +31,34 @@ const Item = ({ item, index, itemsLength, categoryIndex }) => {
           circle
           width="40px"
           height="40px"
-          onClick={() => removeItem(categoryIndex, item.itemId)}
+          onClick={() =>
+            openModal(
+              "Remover Item",
+              <div>
+                Tem certeza que quer remover o item{" "}
+                <span
+                  style={{
+                    color: "var(--light-green)",
+                    fontWeight: "bold",
+                    fontSize: "20px",
+                  }}
+                >
+                  {item?.title}
+                </span>
+                ? Essa ação não poderá ser desfeita.
+              </div>,
+              [
+                {
+                  text: <FaTrash />,
+                  onClick: () => {
+                    removeItem(categoryIndex, item.itemId);
+                    modalReset();
+                  },
+                  backgroundColor: "var(--regular-red)",
+                },
+              ]
+            )
+          }
         >
           <FaTrash />
         </Button>

@@ -1,19 +1,21 @@
 import Router from "./routes";
+import ModalCustom from "./views/Modal"
+import Styled from "./styles/AppStyles.jsx"
+import {useModal} from "./provider/modal"
 
 function App() {
+
+  const {show} = useModal()
   return (
-    <div
+    <Styled
       className="App"
       style={{
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "start",
-        justifyContent: "center",
-        width: "100vw",
+        
       }}
     >
       <Router />
-    </div>
+      {show && <ModalCustom/>}
+    </Styled>
   );
 }
 

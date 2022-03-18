@@ -12,6 +12,7 @@ import {
 import React, { useState, useRef } from "react";
 import { useMenu } from "../../../../provider/menuProvider";
 import DivInput from "../../../../components/DivInput";
+import { useModal } from "../../../../provider/modal";
 
 const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
   const {
@@ -21,6 +22,8 @@ const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
     modifyCategory,
     addItem,
   } = useMenu();
+
+  const { openModal, modalReset } = useModal();
 
   const titleRef = useRef(null);
   const descriptionRef = useRef(null);
@@ -43,7 +46,34 @@ const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
           <Button
             width="40px"
             circle
-            onClick={() => removeCategory(item.categoryId)}
+            onClick={() =>
+              openModal(
+                "Remover Categoria",
+                <div>
+                  Tem certeza que quer remover a categoria{" "}
+                  <span
+                    style={{
+                      color: "var(--blue)",
+                      fontWeight: "bold",
+                      fontSize: "20px",
+                    }}
+                  >
+                    {item?.category}
+                  </span>
+                  ? Essa ação não poderá ser desfeita.
+                </div>,
+                [
+                  {
+                    text: <FaTrash />,
+                    onClick: () => {
+                      removeCategory(item.categoryId);
+                      modalReset();
+                    },
+                    backgroundColor: "var(--regular-red)",
+                  },
+                ]
+              )
+            }
           >
             <FaTrash />
           </Button>
@@ -89,7 +119,7 @@ const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
           <DivInput
             ref={titleRef}
             disabled={disabled}
-            fontSize="18px"
+            fontSize="16px"
             value={item?.category}
             onClick={() => {
               handleClick("category", titleRef.current.inputValue);
@@ -107,7 +137,7 @@ const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
           type="textarea"
           height="80px"
           disabled={disabled}
-          fontSize="16px"
+          fontSize="14px"
           value={item?.description}
           onClick={() => handleClick("desc", descriptionRef.current.inputValue)}
           keyValue="desc"
@@ -119,6 +149,7 @@ const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
         <div className="itens-box">
           <div className="labels">ITENS</div>
           <AccordionCustom
+            generalColor="var(--green)"
             fontFamily="arial"
             fontSize="16px"
             list={item?.items}

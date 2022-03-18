@@ -8,6 +8,7 @@ const AccordionCustom = ({
   disableKey = "active",
   fontFamily,
   categoryIndex,
+  generalColor,
   margin,
   fontSize ="35px",
   inactiveFontSize="20px",
@@ -22,7 +23,7 @@ const AccordionCustom = ({
               {" "}
               <div
                 style={{
-                  color: !items[disableKey] && "var(--regular-red)",
+                  color:  !items[disableKey] ? "var(--regular-red)" : generalColor,
                   fontSize: fontSize,
                   fontFamily: fontFamily,
                 }}
