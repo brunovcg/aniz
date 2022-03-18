@@ -1,7 +1,7 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
 import { MENU } from "../../assets/constants";
 import { v4 as uuidv4 } from "uuid";
-import _ from "lodash"
+import _ from "lodash";
 
 const MenuContext = createContext([]);
 
@@ -10,36 +10,33 @@ const initialCategory = {
   categoryId: "",
   category: "Nova Categoria",
   description: "",
-  active: true,
+  active: false,
   position: 0,
   items: [],
+};
+
+const initialItem = {
+  id: 0,
+  itemId: "",
+  title: "Novo Item",
+  price: "0,00",
+  desc: "",
+  position: 0,
+  active: false,
 };
 
 export const MenuProvider = ({ children }) => {
   const [menu, setMenu] = useState([]);
 
-  // const reduceRef = (idKind) => {
-  //   menu.reduce((acc, value) => {
-  //     acc[value[idKind]] = React.createRef();
-  //     return acc;
-  //   }, {});
-  // };
-
-  // const [catRefs, setCatRefs] = useState(reduceRef("categoryId"));
-
-  // const scroolToNewCategory = (id) => {
-  //   catRefs[id].current.scroolIntoView({
-  //     behaviour: "smooth",
-  //     block: "start",
-  //   });
-  // };
-
   const getMenu = () => {
     setMenu(MENU);
   };
 
+
+  // --------------------------------------- CATEGORY FUNCIONS --------------------------------------------
+
   const addCategory = () => {
-    let newCategory =  _.cloneDeep(initialCategory);
+    let newCategory = _.cloneDeep(initialCategory);
 
     newCategory.categoryId = uuidv4();
     newCategory.position = menu.length;
@@ -82,24 +79,74 @@ export const MenuProvider = ({ children }) => {
   };
 
   const modifyCategory = (index, key, value) => {
+    const newMenu = _.cloneDeep(menu);
+    newMenu[index][key] = value;
 
-    console.log(index)
-
-    const newMenu = _.cloneDeep(menu)
-
-    newMenu[index][key] = value
 
     setMenu(newMenu);
+  };
+
+    // ------------------------------------ ITEM FUNCIONS --------------------------------------
+
+  const addItem = (categoryIndex) => {
+    let newMenu = _.cloneDeep(menu);
+    let newItem = _.cloneDeep(initialItem);
+    newItem.itemId = uuidv4();
+    newItem.position = menu[categoryIndex].items.length;
+    let items = [...newMenu[categoryIndex].items, newItem];
+    newMenu[categoryIndex].items = items;
+
+    setMenu(newMenu);
+  };
 
 
-  }
+  const modifyItem = (categoryIndex,index, key, value) => {
+    let newMenu = _.cloneDeep(menu);
 
-  const addItem = (categoryId) => {};
-  const removeItem = (categoryId, itemId) => {};
-  const moveItem = (categoryId, index, direction) => {};
+    
+    newMenu[categoryIndex].items[index][key] = value;
 
 
-  const toogleItemStatus = (categoryId, itemId) => {};
+    setMenu(newMenu);
+  };
+
+  const removeItem = (categoryIndex, itemId) => {
+    let rest = _.cloneDeep(menu);
+    rest[categoryIndex].items = rest[categoryIndex].items.filter(
+      (it) => it.itemId !== itemId
+    );
+    setMenu(rest);
+  };
+
+  const moveItem = (categoryIndex, index, direction) => {
+    let newMenu = _.cloneDeep(menu);
+    let selected = menu[categoryIndex].items[index];
+
+    if (direction === "up") {
+      let before = menu[categoryIndex].items[index - 1];
+      newMenu[categoryIndex].items[index] = before;
+      newMenu[categoryIndex].items[index - 1] = selected;
+      setMenu(newMenu);
+    }
+
+    if (direction === "down") {
+      let after = menu[categoryIndex].items[index + 1];
+      newMenu[categoryIndex].items[index] = after;
+      newMenu[categoryIndex].items[index + 1] = selected;
+      setMenu(newMenu);
+    }
+  };
+
+  const toogleItemStatus = (categoryIndex, index) => {
+    const newMenu = _.cloneDeep(menu);
+
+    newMenu[categoryIndex].items[index].active =
+      !newMenu[categoryIndex].items[index].active;
+
+    setMenu(newMenu);
+  };
+
+
 
   useEffect(() => {
     getMenu();
@@ -113,7 +160,12 @@ export const MenuProvider = ({ children }) => {
         removeCategory,
         moveCategory,
         toogleCategoryStatus,
-        modifyCategory
+        modifyCategory,
+        toogleItemStatus,
+        moveItem,
+        removeItem,
+        addItem,
+        modifyItem
       }}
     >
       {children}

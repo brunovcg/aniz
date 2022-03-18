@@ -5,6 +5,7 @@ const {mobileBreakpoint} = configs
 const Styled = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   margin: 20px 0;
   padding: 0 20px;
@@ -13,7 +14,13 @@ const Styled = styled.div`
   .buttons {
     margin: 5px 0;
     display: flex;
+    width: 250px;
     justify-content: space-between;
+
+    @media (max-width: ${`${mobileBreakpoint}px`}) {
+      width: 100%;
+    }
+
   }
 
   .item-price {

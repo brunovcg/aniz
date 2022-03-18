@@ -7,8 +7,10 @@ const AccordionCustom = ({
   titleKey,
   disableKey = "active",
   fontFamily,
+  categoryIndex,
   margin,
   fontSize ="35px",
+  inactiveFontSize="20px",
   backgroundColor = "var()",
 }) => {
   return (
@@ -20,13 +22,13 @@ const AccordionCustom = ({
               {" "}
               <div
                 style={{
-                  color: !items[disableKey] && "red",
+                  color: !items[disableKey] && "var(--regular-red)",
                   fontSize: fontSize,
                   fontFamily: fontFamily,
                 }}
               >
                 {" "}
-                {items[titleKey]}
+                {items[titleKey]} { !items[disableKey] && <span style={{fontSize: inactiveFontSize}}>(inativo)</span>}
               </div>{" "}
             </Accordion.Header>
             <Accordion.Body
@@ -38,7 +40,7 @@ const AccordionCustom = ({
                
               }}
             >
-              <Component item={items} index={index} menuLength={list.length} />
+              <Component item={items} index={index} menuLength={list.length} categoryIndex={categoryIndex}/>
             </Accordion.Body>
           </Accordion.Item>
         ))}

@@ -6,7 +6,7 @@ import { FaCheck, FaEdit, FaUndo } from "react-icons/fa";
 const DivInput = React.forwardRef(
   (
     {
-      value,
+      value="",
       edit,
       fontSize,
       height,
@@ -15,8 +15,6 @@ const DivInput = React.forwardRef(
       color,
       type = "input",
       onClick,
-      index,
-      keyValue,
     },
     ref
   ) => {
@@ -28,7 +26,7 @@ const DivInput = React.forwardRef(
     });
 
     const save = () => {
-      onClick(index, keyValue, inputValue);
+      onClick()
       setShow(false);
     };
 

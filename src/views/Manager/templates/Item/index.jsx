@@ -1,20 +1,39 @@
 import { FaArrowUp, FaArrowDown, FaPowerOff, FaTrash } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import DivInput from "../../../../components/DivInput";
 import Button from "../../../../components/Button";
 import Styled from "./styles";
+import { useMenu } from "../../../../provider/menuProvider";
 
-const Item = ({ item, index, itemsLength }) => {
+const Item = ({ item, index, itemsLength, categoryIndex }) => {
   const [disabled, setDisabled] = useState(false);
+
+  const { toogleItemStatus, moveItem, removeItem, modifyItem } = useMenu();
+
+  const titleRef = useRef(null);
+  const priceRef = useRef(null);
+  const descriptionRef = useRef(null);
 
   const handleDisable = () => {
     setDisabled(!disabled);
+    toogleItemStatus(categoryIndex, index);
+  };
+
+  const handleClick = (key, value) => {
+    modifyItem(categoryIndex, index, key, value);
   };
 
   return (
     <Styled>
       <div className="buttons">
-        <Button circle width="40px" height="40px"><FaTrash/></Button>
+        <Button
+          circle
+          width="40px"
+          height="40px"
+          onClick={() => removeItem(categoryIndex, item.itemId)}
+        >
+          <FaTrash />
+        </Button>
         <Button
           width="40px"
           backgroundColor={disabled ? "var(--light-green)" : "var(--yellow)"}
@@ -23,13 +42,13 @@ const Item = ({ item, index, itemsLength }) => {
         >
           <FaPowerOff />
         </Button>
-
         <Button
           backgroundColor="var(--blue)"
           circle
           height="40px"
           width="40px"
           disabled={index === 0 ? true : false}
+          onClick={() => moveItem(categoryIndex, index, "up")}
         >
           <FaArrowUp />
         </Button>
@@ -39,6 +58,7 @@ const Item = ({ item, index, itemsLength }) => {
           width="40px"
           backgroundColor="var(--blue)"
           disabled={index === itemsLength - 1 ? true : false}
+          onClick={() => moveItem(categoryIndex, index, "down")}
         >
           <FaArrowDown />
         </Button>
@@ -46,10 +66,30 @@ const Item = ({ item, index, itemsLength }) => {
 
       <div className="item-price">
         <div className="title">
-          <DivInput value={item?.title} disabled={disabled} />
+          <DivInput
+            value={item?.title}
+            disabled={disabled}
+            ref={titleRef}
+            onClick={() =>
+              handleClick(
+                "title",
+                titleRef.current.inputValue
+              )
+            }
+          />
         </div>
         <div className="price">
-          <DivInput value={item?.price} disabled={disabled} />
+          <DivInput
+            value={item?.price}
+            disabled={disabled}
+            onClick={() =>
+              handleClick(
+                "price",
+                priceRef.current.inputValue
+              )
+            }
+            ref={priceRef}
+          />
         </div>
       </div>
       <div className="desc">
@@ -58,6 +98,13 @@ const Item = ({ item, index, itemsLength }) => {
           type="textarea"
           height="60px"
           value={item?.desc}
+          onClick={() =>
+            handleClick(
+              "desc",
+              descriptionRef.current.inputValue
+            )
+          }
+          ref={descriptionRef}
         />
       </div>
     </Styled>
