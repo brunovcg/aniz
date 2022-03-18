@@ -32,7 +32,6 @@ export const MenuProvider = ({ children }) => {
     setMenu(MENU);
   };
 
-
   // --------------------------------------- CATEGORY FUNCIONS --------------------------------------------
 
   const addCategory = () => {
@@ -52,22 +51,29 @@ export const MenuProvider = ({ children }) => {
 
   const moveCategory = (index, direction) => {
     let newMenu = _.cloneDeep(menu);
-    let selected = menu[index];
+    let selected = newMenu[index];
+    let posSelected = selected.position;
 
     if (direction === "up") {
-      let before = menu[index - 1];
+      let before = newMenu[index - 1];
+      let posBefore = before.position;
+
+      newMenu[index].position = posBefore;
+      newMenu[index - 1].position = posSelected;
       newMenu[index] = before;
       newMenu[index - 1] = selected;
-
-      setMenu(newMenu);
     }
     if (direction === "down") {
       let after = menu[index + 1];
+      let posAfter = after.position;
+
+      newMenu[index].position = posAfter;
+      newMenu[index + 1].position = posSelected;
       newMenu[index] = after;
       newMenu[index + 1] = selected;
-
-      setMenu(newMenu);
     }
+
+    setMenu(newMenu);
   };
 
   const toogleCategoryStatus = (index) => {
@@ -82,11 +88,10 @@ export const MenuProvider = ({ children }) => {
     const newMenu = _.cloneDeep(menu);
     newMenu[index][key] = value;
 
-
     setMenu(newMenu);
   };
 
-    // ------------------------------------ ITEM FUNCIONS --------------------------------------
+  // ------------------------------------ ITEM FUNCIONS --------------------------------------
 
   const addItem = (categoryIndex) => {
     let newMenu = _.cloneDeep(menu);
@@ -99,13 +104,10 @@ export const MenuProvider = ({ children }) => {
     setMenu(newMenu);
   };
 
-
-  const modifyItem = (categoryIndex,index, key, value) => {
+  const modifyItem = (categoryIndex, index, key, value) => {
     let newMenu = _.cloneDeep(menu);
 
-    
     newMenu[categoryIndex].items[index][key] = value;
-
 
     setMenu(newMenu);
   };
@@ -120,21 +122,30 @@ export const MenuProvider = ({ children }) => {
 
   const moveItem = (categoryIndex, index, direction) => {
     let newMenu = _.cloneDeep(menu);
-    let selected = menu[categoryIndex].items[index];
+    let selected = newMenu[categoryIndex].items[index];
+    let posSelected = selected.position;
 
     if (direction === "up") {
       let before = menu[categoryIndex].items[index - 1];
+      let posBefore = before.position;
+
+      newMenu[categoryIndex].items[index].position = posBefore;
+      newMenu[categoryIndex].items[index - 1].position = posSelected;
       newMenu[categoryIndex].items[index] = before;
       newMenu[categoryIndex].items[index - 1] = selected;
-      setMenu(newMenu);
     }
 
     if (direction === "down") {
       let after = menu[categoryIndex].items[index + 1];
+      let posAfter = after.position;
+
+      newMenu[categoryIndex].items[index].position = posAfter;
+      newMenu[categoryIndex].items[index + 1].position = posSelected;
       newMenu[categoryIndex].items[index] = after;
       newMenu[categoryIndex].items[index + 1] = selected;
-      setMenu(newMenu);
     }
+
+    setMenu(newMenu);
   };
 
   const toogleItemStatus = (categoryIndex, index) => {
@@ -145,8 +156,6 @@ export const MenuProvider = ({ children }) => {
 
     setMenu(newMenu);
   };
-
-
 
   useEffect(() => {
     getMenu();
@@ -165,7 +174,7 @@ export const MenuProvider = ({ children }) => {
         moveItem,
         removeItem,
         addItem,
-        modifyItem
+        modifyItem,
       }}
     >
       {children}

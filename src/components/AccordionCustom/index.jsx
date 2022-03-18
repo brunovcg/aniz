@@ -17,7 +17,7 @@ const AccordionCustom = ({
   return (
     <Accordion style={{ width: "100%", margin: margin }}>
       {list &&
-        list.map((items, index) => (
+        list.sort((a,b)=> a - b).map((items, index) => (
           <Accordion.Item eventKey={items[idKey]} key={items[idKey]}>
             <Accordion.Header>
               {" "}
