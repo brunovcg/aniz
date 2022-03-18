@@ -1,6 +1,6 @@
 import Styled from "./styles";
 
-const Input = ({error, ...rest }) => {
+const Input = ({ error, ...rest }) => {
   return (
     <Styled error={error}>
       <input {...rest} />

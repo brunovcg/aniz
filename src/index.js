@@ -4,6 +4,7 @@ import App from "./App";
 import Providers from "./provider";
 import { BrowserRouter } from "react-router-dom";
 import GlobalStyle from "./styles/GlobalStyles";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>

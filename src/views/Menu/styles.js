@@ -1,12 +1,13 @@
-import { configs } from "../../configs";
+import {configs} from "../../configs"
 import styled from "styled-components";
+const {mobileBreakpoint} = configs
+
 
 const Styled = styled.div`
   background-image: url(${configs.backgroundImage});
   background-repeat: repeat;
   background-size: 100vw auto;
   background-attachment: scroll;
-
   width: 100%;
 
   .transparent {
@@ -19,7 +20,7 @@ const Styled = styled.div`
     justify-content: center;
 
     .logo-insta {
-      @media (max-width: 768px) {
+      @media (max-width: ${`${mobileBreakpoint}px`}) {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -61,7 +62,7 @@ const Styled = styled.div`
           max-width: 80%;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: ${`${mobileBreakpoint}px`}) {
           width: 70%;
         }
       }
@@ -76,7 +77,7 @@ const Styled = styled.div`
       align-items: center;
       flex-direction: column;
 
-      @media (max-width: 768px) {
+      @media (max-width: ${`${mobileBreakpoint}px`}) {
         margin-top: 10px;
         width: 95%;
       }
@@ -106,7 +107,7 @@ const Styled = styled.div`
             color: var(--yellow);
             text-align: center;
 
-            @media (max-width: 768px) {
+            @media (max-width: ${`${mobileBreakpoint}px`}) {
               width: 90%;
             }
           }
@@ -115,7 +116,7 @@ const Styled = styled.div`
         article {
           margin: 25px 30px;
 
-          @media (max-width: 768px) {
+          @media (max-width: ${`${mobileBreakpoint}px`}) {
             margin: 25px 20px;
           }
 
@@ -127,14 +128,14 @@ const Styled = styled.div`
             color: var(--white);
             font-weight: bold;
 
-            @media (max-width: 768px) {
+            @media (max-width: ${`${mobileBreakpoint}px`}) {
               font-size: 18px;
 
               .price {
                 width: 30%;
                 text-align: end;
 
-                @media (max-width: 768px) {
+                @media (max-width: ${`${mobileBreakpoint}px`}) {
                   width: 40%;
                 }
               }
@@ -146,7 +147,7 @@ const Styled = styled.div`
             font-size: 14px;
             font-weight: bold;
 
-            @media (max-width: 768px) {
+            @media (max-width: ${`${mobileBreakpoint}px`}) {
               margin-top: 5px;
               font-size: 14px;
             }

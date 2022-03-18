@@ -1,6 +1,7 @@
 export const MENU = [
   {
     id: 1,
+    categoryId: "1",
     category: "Almoço",
     description: "Escolha 2 acompanhamentos - (Exceto Espaguete à Bolonhesa)",
     active: true,
@@ -13,6 +14,7 @@ export const MENU = [
         desc: "Filé de peito de frango, cortado em cubos com molho à base de mostarda e ketchup",
         active: true,
         position: 1,
+        itemId: "1",
       },
 
       {
@@ -22,6 +24,7 @@ export const MENU = [
         desc: "Massa ao molho de tomate e carne moída",
         active: true,
         position: 2,
+        itemId: "2",
       },
       {
         id: 8,
@@ -30,6 +33,7 @@ export const MENU = [
         desc: "Filé de peito de frango grelhado",
         active: true,
         position: 3,
+        itemId: "3",
       },
       {
         id: 7,
@@ -38,6 +42,7 @@ export const MENU = [
         desc: "Filé de peito de frango empanado coberto com delicioso molho de tomate",
         active: true,
         position: 4,
+        itemId: "4",
       },
 
       {
@@ -47,6 +52,7 @@ export const MENU = [
         desc: "Filé de peito de frango grelhado acompanhado por delicioso molho de mostarda",
         active: true,
         position: 5,
+        itemId: "5",
       },
       {
         id: 3,
@@ -55,6 +61,7 @@ export const MENU = [
         desc: "Bife empanado na farinha",
         active: true,
         position: 6,
+        itemId: "6",
       },
       {
         id: 1,
@@ -63,6 +70,7 @@ export const MENU = [
         desc: "Filé empanado com molho de tomate",
         active: true,
         position: 7,
+        itemId: "7",
       },
       {
         id: 2,
@@ -71,6 +79,7 @@ export const MENU = [
         desc: "Bife grelhado, acompanhado de molho de mostarda",
         active: true,
         position: 8,
+        itemId: "8",
       },
       {
         id: 4,
@@ -79,6 +88,7 @@ export const MENU = [
         desc: "Cubos de Carne de Sol acebolada",
         active: true,
         position: 9,
+        itemId: "9",
       },
 
       {
@@ -88,6 +98,7 @@ export const MENU = [
         desc: "Maminha grelhada na chapa",
         active: true,
         position: 10,
+        itemId: "10",
       },
       {
         id: 6,
@@ -96,11 +107,13 @@ export const MENU = [
         desc: "Filé de tilápia grelhado",
         active: true,
         position: 11,
+        itemId: "11",
       },
     ],
   },
   {
     id: 2,
+    categoryId: "2",
     category: "Acompanhamentos",
     description: "",
     position: 2,
@@ -111,48 +124,56 @@ export const MENU = [
         title: "Arroz Branco",
         active: true,
         position: 1,
+        itemId: "1",
       },
       {
         id: 2,
         title: "Arroz integral",
         active: true,
         position: 2,
+        itemId: "2",
       },
       {
         id: 3,
         title: "Arroz com brócolis",
         active: true,
         position: 3,
+        itemId: "3",
       },
       {
         id: 4,
         title: "Arroz com cenoura",
         active: true,
         position: 4,
+        itemId: "4",
       },
       {
         id: 5,
         title: "Batata frita",
         active: true,
         position: 5,
+        itemId: "5",
       },
       {
         id: 6,
         title: "Feijão carioca",
         active: true,
         position: 6,
+        itemId: "6",
       },
       {
         id: 7,
         title: "Feijão verde",
         active: true,
         position: 7,
+        itemId: "7",
       },
       {
         id: 8,
         title: "Macarrão espaguete na manteiga",
         active: true,
         position: 8,
+        itemId: "8",
       },
 
       {
@@ -160,6 +181,7 @@ export const MENU = [
         title: "Purê de batata",
         active: true,
         position: 9,
+        itemId: "9",
       },
       {
         id: 10,
@@ -167,6 +189,7 @@ export const MENU = [
         active: true,
         desc: "(Mix de folhas, cenoura ralada, repolho roxo, tomatinhos)",
         position: 10,
+        itemId: "10",
       },
 
       {
@@ -174,11 +197,13 @@ export const MENU = [
         title: "Vinagrete e farofa",
         active: true,
         position: 11,
+        itemId: "11",
       },
     ],
   },
   {
     id: 3,
+    categoryId: "3",
     category: "Saladas",
     active: true,
     position: 3,
@@ -189,6 +214,7 @@ export const MENU = [
         price: "27,90",
         active: true,
         position: 1,
+        itemId: "1",
       },
       {
         id: 2,
@@ -196,12 +222,14 @@ export const MENU = [
         price: "23,90",
         active: true,
         position: 2,
+        itemId: "2",
       },
     ],
   },
 
   {
     id: 4,
+    categoryId: "4",
     category: "Da Nossa Cozinha",
     active: true,
     position: 4,
@@ -212,6 +240,7 @@ export const MENU = [
         price: "10,90",
         active: true,
         position: 1,
+        itemId: "1",
       },
       {
         id: 2,
@@ -219,6 +248,7 @@ export const MENU = [
         price: "10,90",
         active: true,
         position: 2,
+        itemId: "2",
       },
       {
         id: 3,
@@ -226,6 +256,7 @@ export const MENU = [
         price: "8,90",
         active: true,
         position: 3,
+        itemId: "3",
       },
       {
         id: 4,
@@ -233,6 +264,7 @@ export const MENU = [
         price: "7,90",
         active: true,
         position: 4,
+        itemId: "4",
       },
       {
         id: 5,
@@ -240,6 +272,7 @@ export const MENU = [
         price: "13,90",
         active: true,
         position: 5,
+        itemId: "5",
       },
 
       {
@@ -248,6 +281,7 @@ export const MENU = [
         price: "10,90",
         active: true,
         position: 6,
+        itemId: "6",
       },
       {
         id: 7,
@@ -255,6 +289,7 @@ export const MENU = [
         price: "11,90",
         active: true,
         position: 7,
+        itemId: "7",
       },
 
       {
@@ -263,6 +298,7 @@ export const MENU = [
         price: "7,90",
         active: true,
         position: 8,
+        itemId: "8",
       },
       {
         id: 9,
@@ -270,6 +306,7 @@ export const MENU = [
         price: "9,90",
         active: true,
         position: 9,
+        itemId: "9",
       },
       {
         id: 10,
@@ -277,6 +314,7 @@ export const MENU = [
         price: "6,90",
         active: true,
         position: 10,
+        itemId: "10",
       },
       {
         id: 11,
@@ -284,6 +322,7 @@ export const MENU = [
         price: "7,50",
         active: true,
         position: 11,
+        itemId: "11",
       },
     ],
   },
@@ -291,6 +330,7 @@ export const MENU = [
     id: 8,
     category: "Sopas",
     position: 5,
+    categoryId: "5",
     active: true,
     items: [
       {
@@ -300,6 +340,7 @@ export const MENU = [
         desc: "Consulte a opção do dia",
         price: "7,50",
         position: 1,
+        itemId: "1",
       },
     ],
   },
@@ -308,6 +349,7 @@ export const MENU = [
     id: 5,
     category: "Salgados",
     position: 6,
+    categoryId: "6",
     active: true,
     description: "",
     items: [
@@ -317,6 +359,7 @@ export const MENU = [
         price: "5,00",
         active: true,
         position: 1,
+        itemId: "1",
       },
       {
         id: 12,
@@ -324,6 +367,7 @@ export const MENU = [
         price: "7,00",
         active: true,
         position: 2,
+        itemId: "2",
       },
       {
         id: 1,
@@ -331,6 +375,7 @@ export const MENU = [
         price: "8,90",
         active: true,
         position: 3,
+        itemId: "3",
       },
       {
         id: 2,
@@ -338,6 +383,7 @@ export const MENU = [
         price: "7,90",
         active: true,
         position: 4,
+        itemId: "4",
       },
       {
         id: 45,
@@ -345,6 +391,7 @@ export const MENU = [
         price: "6,00",
         active: true,
         position: 5,
+        itemId: "5",
       },
       {
         id: 23,
@@ -352,6 +399,7 @@ export const MENU = [
         price: "7,00",
         active: true,
         position: 6,
+        itemId: "6",
       },
       {
         id: 20,
@@ -359,6 +407,7 @@ export const MENU = [
         price: "7,00",
         active: true,
         position: 7,
+        itemId: "7",
       },
       {
         id: 21,
@@ -366,6 +415,7 @@ export const MENU = [
         price: "7,00",
         active: true,
         position: 8,
+        itemId: "8",
       },
       {
         id: 6,
@@ -373,6 +423,7 @@ export const MENU = [
         price: "2,00",
         active: true,
         position: 9,
+        itemId: "9",
       },
       {
         id: 7,
@@ -380,6 +431,7 @@ export const MENU = [
         price: "4,00",
         active: true,
         position: 10,
+        itemId: "10",
       },
       {
         id: 8,
@@ -387,6 +439,7 @@ export const MENU = [
         price: "5,50",
         active: true,
         position: 11,
+        itemId: "11",
       },
       {
         id: 9,
@@ -394,6 +447,7 @@ export const MENU = [
         price: "6,00",
         active: true,
         position: 12,
+        itemId: "12",
       },
       {
         id: 15,
@@ -401,6 +455,7 @@ export const MENU = [
         price: "5,50",
         active: true,
         position: 13,
+        itemId: "13",
       },
       {
         id: 10,
@@ -408,6 +463,7 @@ export const MENU = [
         price: "6,00",
         active: true,
         position: 14,
+        itemId: "14",
       },
       {
         id: 11,
@@ -415,14 +471,16 @@ export const MENU = [
         price: "7,00",
         active: true,
         position: 15,
+        itemId: "15",
       },
-      
+
       {
         id: 3,
         title: "Sanduíche de frango com queijo e salada em pão de leite",
         price: "10,90",
         active: true,
         position: 16,
+        itemId: "16",
       },
       {
         id: 4,
@@ -430,6 +488,7 @@ export const MENU = [
         price: "8,90",
         active: true,
         position: 17,
+        itemId: "17",
       },
 
       {
@@ -438,6 +497,7 @@ export const MENU = [
         price: "8,90",
         active: true,
         position: 18,
+        itemId: "18",
       },
     ],
   },
@@ -445,6 +505,7 @@ export const MENU = [
     id: 6,
     category: "Doces",
     position: 7,
+    categoryId: "7",
     description: "",
     active: true,
     items: [
@@ -455,6 +516,7 @@ export const MENU = [
         price: "6,00",
         active: true,
         position: 1,
+        itemId: "1",
       },
       {
         id: 2,
@@ -462,6 +524,7 @@ export const MENU = [
         price: "6,00",
         active: true,
         position: 2,
+        itemId: "2",
       },
       {
         id: 3,
@@ -469,6 +532,7 @@ export const MENU = [
         price: "6,00",
         active: true,
         position: 3,
+        itemId: "3",
       },
       {
         id: 4,
@@ -476,6 +540,7 @@ export const MENU = [
         price: "3,00",
         active: true,
         position: 4,
+        itemId: "4",
       },
       {
         id: 5,
@@ -484,6 +549,7 @@ export const MENU = [
         price: "4,00",
         active: true,
         position: 5,
+        itemId: "5",
       },
       {
         id: 6,
@@ -491,6 +557,7 @@ export const MENU = [
         price: "9,90",
         active: true,
         position: 6,
+        itemId: "6",
       },
       {
         id: 9,
@@ -498,6 +565,7 @@ export const MENU = [
         price: "9,90",
         active: true,
         position: 7,
+        itemId: "7",
       },
       {
         id: 7,
@@ -505,6 +573,7 @@ export const MENU = [
         price: "10,90",
         active: true,
         position: 8,
+        itemId: "8",
       },
 
       {
@@ -513,12 +582,14 @@ export const MENU = [
         price: "7,00",
         active: true,
         position: 9,
+        itemId: "9",
       },
     ],
   },
   {
     id: 7,
     category: "Bebidas",
+    categoryId: "8",
     active: true,
     position: 8,
     description: "",
@@ -529,6 +600,7 @@ export const MENU = [
         price: "3,00",
         active: true,
         position: 1,
+        itemId: "1",
       },
       {
         id: 2,
@@ -536,6 +608,7 @@ export const MENU = [
         price: "4,60",
         active: true,
         position: 2,
+        itemId: "2",
       },
       {
         id: 3,
@@ -543,6 +616,7 @@ export const MENU = [
         price: "5,50",
         active: true,
         position: 3,
+        itemId: "3",
       },
       {
         id: 5,
@@ -550,6 +624,7 @@ export const MENU = [
         price: "3,50",
         active: true,
         position: 4,
+        itemId: "4",
       },
       {
         id: 6,
@@ -557,6 +632,7 @@ export const MENU = [
         price: "6,50",
         active: true,
         position: 5,
+        itemId: "5",
       },
       {
         id: 7,
@@ -564,6 +640,7 @@ export const MENU = [
         price: "5,90",
         active: true,
         position: 6,
+        itemId: "6",
       },
       {
         id: 8,
@@ -571,6 +648,7 @@ export const MENU = [
         price: "6,90",
         active: true,
         position: 7,
+        itemId: "7",
       },
       {
         id: 9,
@@ -578,6 +656,7 @@ export const MENU = [
         price: "5,00",
         active: true,
         position: 8,
+        itemId: "8",
       },
     ],
   },

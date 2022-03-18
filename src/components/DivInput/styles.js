@@ -11,13 +11,10 @@ const Styled = styled.div`
 
   .input-div {
     display: flex;
-    width: 70%;
+    width: 80%;
     align-items: center;
     height: 100%;
-
-    @media (max-width: 768px) {
-      width: 65%;
-    }
+    justify-content: space-between;
 
     .input-change {
       height: 100%;
@@ -36,8 +33,10 @@ const Styled = styled.div`
   }
 
   .button-box {
+    width: 20%;
     display: flex;
     height: 100%;
+    justify-content: end;
     align-items: center;
 
     button {

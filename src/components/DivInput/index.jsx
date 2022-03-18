@@ -5,19 +5,38 @@ import { FaTimes, FaCheck, FaEdit } from "react-icons/fa";
 
 const DivInput = React.forwardRef(
   (
-    { value, edit, fontSize, height, fontFamily, disabled, color, type = "input" },
+    {
+      value,
+      edit,
+      fontSize,
+      height,
+      fontFamily,
+      disabled,
+      color,
+      type = "input",
+      onClick,
+      index,
+      keyValue
+    },
     ref
   ) => {
     const [show, setShow] = useState(edit);
     const [inputValue, setInputValue] = useState(value);
+    
 
     useImperativeHandle(ref, () => {
-      return { show };
+      return { show, inputValue };
     });
 
     const save = () => {
+      onClick(index,keyValue,inputValue)
       setShow(false);
     };
+
+    const cancel = () => {
+        setInputValue(value)
+
+    }
 
     return (
       <Styled
@@ -31,12 +50,14 @@ const DivInput = React.forwardRef(
         <div className="input-div">
           {show && type === "input" ? (
             <input
+              ref={ref}
               className="input-change"
               value={inputValue}
               onChange={(evt) => setInputValue(evt.target.value)}
             />
           ) : show && type === "textarea" ? (
             <textarea
+              ref={ref}
               className="input-change"
               value={inputValue}
               onChange={(evt) => setInputValue(evt.target.value)}
@@ -56,7 +77,7 @@ const DivInput = React.forwardRef(
             </Button>
           )}
           {show && (
-            <Button onClick={() => setShow(false)}>
+            <Button onClick={cancel}>
               <FaTimes />
             </Button>
           )}

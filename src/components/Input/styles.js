@@ -27,7 +27,7 @@ const Styled = styled.div`
   div {
     width: 100%;
     max-width: 400px;
-    background: ${props=> props.error && "var(--red)"};
+    background: ${(props) => props.error && "var(--red)"};
     color: var(--yellow);
     height: 30px;
     font-size: 16px;

@@ -16,7 +16,6 @@ const GlobalStyle = createGlobalStyle`
         --blue: #aaf;
        
     }
-
   * {
         margin: 0;
         padding: 0;
@@ -32,15 +31,12 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Dancing Script', cursive;
         font-size: 40px;
     }
-  
- 
     a {
         text-decoration: none;
     }
     button {
         cursor: pointer;
     }
-
 `;
 
 export default GlobalStyle;

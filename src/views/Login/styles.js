@@ -18,7 +18,7 @@ const Styled = styled.div`
     align-items: center;
     padding-top: 50px;
 
-    .header{
+    .header {
       width: 100%;
       padding: 0 50px;
 

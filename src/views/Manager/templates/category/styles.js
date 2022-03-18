@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { configs } from "../../../../configs";
+
+const { mobileBreakpoint } = configs;
 
 const Styled = styled.div`
   margin: 15px 0;
@@ -11,7 +14,7 @@ const Styled = styled.div`
   justify-content: center;
   background-color: var(--grey);
 
-  @media (max-width: 768px) {
+  @media (max-width: ${`${mobileBreakpoint}px`}) {
     width: 100%;
     padding: 10px;
   }
@@ -20,23 +23,8 @@ const Styled = styled.div`
     display: flex;
     width: 95%;
 
-    @media (max-width: 768px) {
-      flex-direction: column;
-      width: 100%;
-    }
+    justify-content: center;
 
-    h2 {
-      margin: 0;
-      width: 50%;
-      font-size: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      @media (max-width: 768px) {
-        width: 100%;
-      }
-    }
     .buttons {
       display: flex;
       align-items: center;
@@ -47,7 +35,7 @@ const Styled = styled.div`
       border: 1px black solid;
       padding: 5px 0;
 
-      @media (max-width: 768px) {
+      @media (max-width: ${`${mobileBreakpoint}px`}) {
         flex-wrap: wrap;
         width: 100%;
       }
@@ -64,7 +52,7 @@ const Styled = styled.div`
     justify-content: space-between;
     margin: 10px 0;
 
-    @media (max-width: 768px) {
+    @media (max-width: ${`${mobileBreakpoint}px`}) {
       flex-direction: column;
     }
 
@@ -73,7 +61,7 @@ const Styled = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      @media (max-width: 768px) {
+      @media (max-width: ${`${mobileBreakpoint}px`}) {
         width: 100%;
       }
     }
@@ -84,7 +72,7 @@ const Styled = styled.div`
     justify-content: center;
     width: 100%;
     flex-direction: column;
-    padding: 10px;
+    padding: 0px 5px;
     background-color: white;
     align-items: center;
   }

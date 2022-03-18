@@ -1,4 +1,8 @@
 import styled from "styled-components";
+import {configs} from "../../../../configs"
+
+const {mobileBreakpoint} = configs
+
 
 const Styled = styled.div`
   display: flex;
@@ -11,7 +15,6 @@ const Styled = styled.div`
 
   .buttons {
     margin: 5px 0;
-
     display: flex;
     justify-content: space-between;
   }
@@ -22,7 +25,7 @@ const Styled = styled.div`
     justify-content: space-between;
     margin: 10px 0;
 
-    @media (max-width: 768px) {
+    @media (max-width: ${`${mobileBreakpoint}px`}) {
       flex-direction: column;
       justify-content: start;
       align-items: start;
@@ -31,7 +34,7 @@ const Styled = styled.div`
     .title {
       width: 60%;
 
-      @media (max-width: 768px) {
+      @media (max-width: ${`${mobileBreakpoint}px`}) {
         width: 100%;
       }
     }
@@ -39,7 +42,7 @@ const Styled = styled.div`
     .price {
       width: 30%;
 
-      @media (max-width: 768px) {
+      @media (max-width: ${`${mobileBreakpoint}px`}x) {
         margin-top: 5px;
         width: 100%;
       }

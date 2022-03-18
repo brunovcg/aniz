@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 
 const Menu = () => {
   const { menu } = useMenu();
-
   const navigate = useNavigate();
 
   return (
@@ -31,7 +30,7 @@ const Menu = () => {
           {menu
             .filter((item) => item.active)
             .map((category) => (
-              <section key={category.id}>
+              <section key={category.categoryId}>
                 <div className="category-title-description">
                   <h2 className="category-title">{category.category}</h2>
                   {category?.description && (
@@ -43,7 +42,7 @@ const Menu = () => {
                 {category.items
                   .filter((item) => item.active)
                   .map((item) => (
-                    <article key={category.category + item.id}>
+                    <article key={item.itemId}>
                       <div className="title-price">
                         <div className="title">{item.title}</div>
                         <div className="price">
