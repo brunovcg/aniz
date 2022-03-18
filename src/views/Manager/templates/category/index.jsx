@@ -22,8 +22,8 @@ const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
     addItem,
   } = useMenu();
 
-  const titleRef = useRef(null)
-  const descriptionRef = useRef(null)
+  const titleRef = useRef(null);
+  const descriptionRef = useRef(null);
 
   const [disabled, setDisabled] = useState(false);
 
@@ -32,9 +32,9 @@ const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
     setDisabled(!disabled);
   };
 
-  const handleClick = (key,value) => {
-    modifyCategory(index,key, value)
-  }
+  const handleClick = (key, value) => {
+    modifyCategory(index, key, value);
+  };
 
   return (
     <Styled disabled={disabled} ref={ref}>
@@ -55,7 +55,11 @@ const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
           >
             <FaPowerOff />
           </Button>
-          <Button disabled={disabled} backgroundColor="var(--light-green)" onClick={()=>addItem(index)}>
+          <Button
+            disabled={disabled}
+            backgroundColor="var(--light-green)"
+            onClick={() => addItem(index)}
+          >
             <FaPlus /> Item
           </Button>
           <Button
@@ -80,14 +84,16 @@ const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
       </div>
 
       <div className="title-buttons">
+        <div className="labels">CATEGORIA</div>
         <div className="div-input-box">
           <DivInput
             ref={titleRef}
             disabled={disabled}
             fontSize="18px"
             value={item?.category}
-            color="var(--red)"
-            onClick={()=>{handleClick("category",titleRef.current.inputValue)}}
+            onClick={() => {
+              handleClick("category", titleRef.current.inputValue);
+            }}
             keyValue="category"
             index={index}
           />
@@ -95,8 +101,7 @@ const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
       </div>
 
       <div className="description">
-        <div className="description-label">DESCRIÇÃO</div>
-
+        <div className="labels">DESCRIÇÃO</div>
         <DivInput
           ref={descriptionRef}
           type="textarea"
@@ -104,7 +109,7 @@ const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
           disabled={disabled}
           fontSize="16px"
           value={item?.description}
-          onClick={()=>handleClick("desc",descriptionRef.current.inputValue)}
+          onClick={() => handleClick("desc", descriptionRef.current.inputValue)}
           keyValue="desc"
           index={index}
         />
@@ -112,7 +117,7 @@ const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
 
       {!disabled && (
         <div className="itens-box">
-          <div className="itens-label">ITENS</div>
+          <div className="labels">ITENS</div>
           <AccordionCustom
             fontFamily="arial"
             fontSize="16px"
@@ -123,6 +128,10 @@ const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
             backgroundColor="var(--grey)"
             categoryIndex={index}
           />
+
+          {item.items.length === 0 && (
+            <div className="no-item">Não Existem itens cadastrados</div>
+          )}
         </div>
       )}
     </Styled>

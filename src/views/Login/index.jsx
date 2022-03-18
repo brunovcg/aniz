@@ -11,7 +11,9 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  const handleSubmit = () => {
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+
     if (!username.text) {
       setUsername({ ...username, error: true });
     }
@@ -20,8 +22,6 @@ const Login = () => {
     }
 
     if (password.text && username.text) {
-      console.log({ username: username.text, password: password.text });
-
       navigate("/manager");
     }
   };
@@ -30,12 +30,20 @@ const Login = () => {
     <Styled>
       <div className="transparent">
         <div className="header">
-          <Button onClick={() => navigate("/")} circle width="60px" height="60px" fontSize="30px"><FaArrowAltCircleLeft/></Button>
+          <Button
+            onClick={() => navigate("/")}
+            circle
+            width="60px"
+            height="60px"
+            fontSize="30px"
+          >
+            <FaArrowAltCircleLeft />
+          </Button>
         </div>
         <h2>LOGIN</h2>
 
         <div className="login-box">
-          <div className="input-box">
+          <form className="input-box">
             <Input
               placeholder="digite o usuário"
               onChange={(evt) =>
@@ -58,13 +66,13 @@ const Login = () => {
               backgroundColor="var(--light-green)"
               width="80px"
               height="80px"
-              onClick={handleSubmit}
+              onClick={(evt) => handleSubmit(evt)}
               fontSize="50px"
               circle
             >
-              <FaCheck/>
+              <FaCheck />
             </Button>
-          </div>
+          </form>
         </div>
       </div>
     </Styled>

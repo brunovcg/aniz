@@ -66,6 +66,7 @@ const Item = ({ item, index, itemsLength, categoryIndex }) => {
 
       <div className="item-price">
         <div className="title">
+        <div className="item-labels">ITEM</div>
           <DivInput
             value={item?.title}
             disabled={disabled}
@@ -79,6 +80,7 @@ const Item = ({ item, index, itemsLength, categoryIndex }) => {
           />
         </div>
         <div className="price">
+        <div className="item-labels">PREÇO</div>
           <DivInput
             value={item?.price}
             disabled={disabled}
@@ -93,6 +95,7 @@ const Item = ({ item, index, itemsLength, categoryIndex }) => {
         </div>
       </div>
       <div className="desc">
+      <div className="item-labels">DESCRIÇÃO</div>
         <DivInput
           disabled={disabled}
           type="textarea"

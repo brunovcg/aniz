@@ -13,7 +13,6 @@ const Manager = () => {
 
   return (
     <Styled>
-      <button onClick={() => console.log(menu)}>teste</button>
       <header>
         <h2>Menu Manager</h2>
         <Button
@@ -29,11 +28,8 @@ const Manager = () => {
       </header>
 
       <div className="container">
-        <Button
-          backgroundColor="var(--light-green)"
-          onClick={() => addCategory()}
-        >
-          <FaPlus/> &nbsp; Categoria
+        <Button backgroundColor="var(--blue)" onClick={() => addCategory()}>
+          <FaPlus /> &nbsp; Categoria
         </Button>
 
         <AccordionCustom
@@ -44,6 +40,10 @@ const Manager = () => {
           titleKey={"category"}
           backgroundColor="var(--grey)"
         />
+
+        {menu.length === 0 && (
+          <div className="no-items">Não existem categorias cadastradas</div>
+        )}
       </div>
     </Styled>
   );

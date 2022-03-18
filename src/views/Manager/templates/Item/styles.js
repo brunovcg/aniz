@@ -10,6 +10,17 @@ const Styled = styled.div`
   margin: 20px 0;
   padding: 0 20px;
 
+  .item-labels {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 13px;
+    background-color: var(--light-green);
+    width: 100%;
+    color: var(--white);
+  }
+
 
   .buttons {
     margin: 5px 0;
@@ -55,6 +66,7 @@ const Styled = styled.div`
 
   .desc {
     display: flex;
+    flex-direction: column;
     width: 100%;
   }
 `;

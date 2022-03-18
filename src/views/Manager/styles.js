@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import {configs} from "../../configs"
+import { configs } from "../../configs";
 
-const {mobileBreakpoint} = configs
+const { mobileBreakpoint } = configs;
 
 const Styled = styled.div`
   display: flex;
@@ -18,13 +18,12 @@ const Styled = styled.div`
     align-items: center;
     height: 15vh;
 
-    h2{
+    h2 {
       @media (max-width: ${`${mobileBreakpoint}px`}) {
         font-size: 35px;
         width: 80%;
         text-align: center;
-    }
-      
+      }
     }
   }
 
@@ -42,6 +41,11 @@ const Styled = styled.div`
       padding: 40px 15px;
     }
   }
+
+ .no-items{
+   background-color: var(--white);
+   padding: 20px;
+ }
 `;
 
 export default Styled;

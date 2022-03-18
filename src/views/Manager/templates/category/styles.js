@@ -43,24 +43,35 @@ const Styled = styled.div`
     }
   }
 
+  .labels {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: var(--blue);
+    width: 100%;
+    color: var(--white);
+  }
+
   .title-buttons {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 10px 0;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @media (max-width: ${`${mobileBreakpoint}px`}) {
       flex-direction: column;
     }
 
     .div-input-box {
-      width: 60%;
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      @media (max-width: ${`${mobileBreakpoint}px`}) {
-        width: 100%;
-      }
     }
   }
 
@@ -71,22 +82,11 @@ const Styled = styled.div`
     flex-direction: column;
     background-color: white;
     align-items: center;
-
-    .description-label {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 18px;
-      background-color: var(--blue);
-      width: 100%;
-      color: var(--white);
-    }
   }
 
   .itens-box {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 15px;
 
     .itens-label {
       background-color: var(--blue);
@@ -98,6 +98,12 @@ const Styled = styled.div`
       font-weight: bold;
       color: var(--white);
     }
+  }
+
+  .no-item{
+    width: 100%;
+    text-align: center;
+    background-color: var(--light-grey);
   }
 `;
 
