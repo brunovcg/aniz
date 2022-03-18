@@ -21,7 +21,6 @@ const Styled = styled.div`
   .header {
     display: flex;
     width: 95%;
-
     justify-content: center;
 
     .buttons {

@@ -29,6 +29,7 @@ const Menu = () => {
         <div className="box">
           {menu
             .filter((item) => item.active)
+            .sort((a,b)=>a.position-b.position)
             .map((category) => (
               <section key={category.categoryId}>
                 <div className="category-title-description">
@@ -40,7 +41,7 @@ const Menu = () => {
                   )}
                 </div>
                 {category.items
-                  .filter((item) => item.active)
+                  .filter((item) => item.active).sort((a,b)=>a.position-b.position)
                   .map((item) => (
                     <article key={item.itemId}>
                       <div className="title-price">

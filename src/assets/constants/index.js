@@ -356,7 +356,7 @@ export const MENU = [
       {
         id: 40,
         title: "Cachorrinho",
-        price: "5,00",
+        price: "6,00",
         active: true,
         position: 1,
         itemId: "1",
@@ -433,14 +433,7 @@ export const MENU = [
         position: 10,
         itemId: "10",
       },
-      {
-        id: 8,
-        title: "Pão na chapa com ovo",
-        price: "5,50",
-        active: true,
-        position: 11,
-        itemId: "11",
-      },
+  
       {
         id: 9,
         title: "Pastel de forno de queijo",
@@ -448,6 +441,22 @@ export const MENU = [
         active: true,
         position: 12,
         itemId: "12",
+      },
+      {
+        id: 19,
+        title: "Pastel de queijo",
+        price: "5,00",
+        active: true,
+        position: 19,
+        itemId: "19",
+      },
+      {
+        id: 8,
+        title: "Pão na chapa com ovo",
+        price: "5,50",
+        active: true,
+        position: 11,
+        itemId: "11",
       },
       {
         id: 15,

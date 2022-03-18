@@ -2,7 +2,7 @@ import Styled from "./styles";
 import { useMenu } from "../../provider/menuProvider";
 import Button from "../../components/Button";
 import Category from "./templates/category";
-import { FaSignOutAlt } from "react-icons/fa";
+import { FaSignOutAlt, FaPlus } from "react-icons/fa";
 import { useUser } from "../../provider/token";
 import React from "react";
 import AccordionCustom from "../../components/AccordionCustom";
@@ -33,10 +33,11 @@ const Manager = () => {
           backgroundColor="var(--light-green)"
           onClick={() => addCategory()}
         >
-          Adicionar Categoria
+          <FaPlus/> &nbsp; Categoria
         </Button>
 
         <AccordionCustom
+          margin="10px 0 0 0"
           list={menu}
           Component={Category}
           idKey={"categoryId"}
