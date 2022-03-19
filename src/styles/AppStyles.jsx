@@ -7,7 +7,7 @@ const Styled = styled.div`
   display: flex;
   align-items: start;
   justify-content: center;
-  width: 98vw;
+  width: 99vw;
 
   @media (max-width: ${`${mobileBreakpoint}px`}) {
     width: 100%;

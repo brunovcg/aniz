@@ -4,10 +4,16 @@ import Input from "../../components/Input";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaArrowAltCircleLeft, FaCheck } from "react-icons/fa";
+import {useUser} from "../../provider/token"
+
+
 
 const Login = () => {
   const [username, setUsername] = useState({ text: "", error: false });
   const [password, setPassword] = useState({ text: "", error: false });
+
+
+  const {login} = useUser()
 
   const navigate = useNavigate();
 
@@ -22,7 +28,7 @@ const Login = () => {
     }
 
     if (password.text && username.text) {
-      navigate("/manager");
+      login({username: username.text, password:password.text});
     }
   };
 

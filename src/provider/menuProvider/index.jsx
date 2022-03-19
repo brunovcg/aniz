@@ -1,7 +1,10 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
-import { MENU } from "../../assets/constants";
+import React, { createContext, useState, useContext } from "react";
+// import { MENU } from "../../assets/constants";
 import { v4 as uuidv4 } from "uuid";
 import _ from "lodash";
+import { api, endpoints } from "../../services";
+
+
 
 const MenuContext = createContext([]);
 
@@ -25,9 +28,17 @@ const initialItem = {
 
 export const MenuProvider = ({ children }) => {
   const [menu, setMenu] = useState([]);
+ 
 
-  const getMenu = () => {
-    setMenu(MENU);
+  const getMenu = (id) => {
+
+
+    api().get(endpoints.user.getData(id)).then((res) => {
+
+      console.log(res.data.categories)
+
+      setMenu(res.data.categories)})
+    
   };
 
   // --------------------------------------- CATEGORY FUNCIONS --------------------------------------------
@@ -155,9 +166,7 @@ export const MenuProvider = ({ children }) => {
     setMenu(newMenu);
   };
 
-  useEffect(() => {
-    getMenu();
-  }, []);
+
 
   return (
     <MenuContext.Provider
@@ -173,6 +182,7 @@ export const MenuProvider = ({ children }) => {
         removeItem,
         addItem,
         modifyItem,
+        getMenu
       }}
     >
       {children}

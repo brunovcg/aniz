@@ -1,26 +1,14 @@
 import Styled from "./styles";
 import logo from "../../assets/images/logo.png";
 import { FaInstagram } from "react-icons/fa";
-import { useMenu } from "../../provider/menuProvider";
 import Button from "../../components/Button";
 import { useNavigate } from "react-router-dom";
-import {useParams} from "react-router-dom"
-import {useState, useEffect} from "react"
+import {MENU} from "../../assets/constants"
 
-const Menu = () => {
-  const { menu, getMenu } = useMenu();
+
+const Home = () => {
+
   const navigate = useNavigate();
-  const {userId} = useParams()
-
-  const [id, setId] = useState(userId)
-
-
-  useEffect(() => {
-
-    getMenu(id);
-  }, [id]);
-
-
   return (
     <Styled>
       <div className="transparent">
@@ -39,7 +27,7 @@ const Menu = () => {
           </div>
         </div>
         <div className="box">
-          {menu
+          {MENU
             .filter((item) => item.active)
             .sort((a,b)=>a.position-b.position)
             .map((category) => (
@@ -79,4 +67,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default Home;
