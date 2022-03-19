@@ -51,7 +51,7 @@ const Item = ({ item, index, itemsLength, categoryIndex }) => {
                 {
                   text: <FaTrash />,
                   onClick: () => {
-                    removeItem(categoryIndex, item.itemId);
+                    removeItem(categoryIndex, item.id);
                     modalReset();
                   },
                   backgroundColor: "var(--regular-red)",

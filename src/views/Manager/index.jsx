@@ -36,7 +36,7 @@ const Manager = () => {
           margin="10px 0 0 0"
           list={menu}
           Component={Category}
-          idKey={"categoryId"}
+          idKey={"id"}
           titleKey={"category"}
           backgroundColor="var(--grey)"
         />

@@ -7,7 +7,6 @@ const MenuContext = createContext([]);
 
 const initialCategory = {
   id: 0,
-  categoryId: "",
   category: "Nova Categoria",
   description: "",
   active: false,
@@ -17,7 +16,6 @@ const initialCategory = {
 
 const initialItem = {
   id: 0,
-  itemId: "",
   title: "Novo Item",
   price: "0,00",
   desc: "",
@@ -37,14 +35,14 @@ export const MenuProvider = ({ children }) => {
   const addCategory = () => {
     let newCategory = _.cloneDeep(initialCategory);
 
-    newCategory.categoryId = uuidv4();
+    newCategory.id = uuidv4();
     newCategory.position = menu.length;
 
     setMenu([...menu, newCategory]);
   };
 
-  const removeCategory = (categoryId) => {
-    let rest = menu.filter((it) => it.categoryId !== categoryId);
+  const removeCategory = (id) => {
+    let rest = menu.filter((it) => it.id !== id);
 
     setMenu(rest);
   };
@@ -96,7 +94,7 @@ export const MenuProvider = ({ children }) => {
   const addItem = (categoryIndex) => {
     let newMenu = _.cloneDeep(menu);
     let newItem = _.cloneDeep(initialItem);
-    newItem.itemId = uuidv4();
+    newItem.id = uuidv4();
     newItem.position = menu[categoryIndex].items.length;
     let items = [...newMenu[categoryIndex].items, newItem];
     newMenu[categoryIndex].items = items;
@@ -112,10 +110,10 @@ export const MenuProvider = ({ children }) => {
     setMenu(newMenu);
   };
 
-  const removeItem = (categoryIndex, itemId) => {
+  const removeItem = (categoryIndex, id) => {
     let rest = _.cloneDeep(menu);
     rest[categoryIndex].items = rest[categoryIndex].items.filter(
-      (it) => it.itemId !== itemId
+      (it) => it.id !== id
     );
     setMenu(rest);
   };

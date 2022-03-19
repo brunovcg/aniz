@@ -66,7 +66,7 @@ const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
                   {
                     text: <FaTrash />,
                     onClick: () => {
-                      removeCategory(item.categoryId);
+                      removeCategory(item.id);
                       modalReset();
                     },
                     backgroundColor: "var(--regular-red)",
@@ -154,7 +154,7 @@ const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
             fontSize="16px"
             list={item?.items}
             Component={Item}
-            idKey={"itemId"}
+            idKey={"id"}
             titleKey={"title"}
             backgroundColor="var(--grey)"
             categoryIndex={index}

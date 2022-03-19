@@ -31,7 +31,7 @@ const Menu = () => {
             .filter((item) => item.active)
             .sort((a,b)=>a.position-b.position)
             .map((category) => (
-              <section key={category.categoryId}>
+              <section key={category.id}>
                 <div className="category-title-description">
                   <h2 className="category-title">{category.category}</h2>
                   {category?.description && (
@@ -43,7 +43,7 @@ const Menu = () => {
                 {category.items
                   .filter((item) => item.active).sort((a,b)=>a.position-b.position)
                   .map((item) => (
-                    <article key={item.itemId}>
+                    <article key={item.id}>
                       <div className="title-price">
                         <div className="title">{item.title}</div>
                         <div className="price">
