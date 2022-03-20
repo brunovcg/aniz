@@ -4,12 +4,18 @@ import Button from "../../components/Button";
 import Category from "./templates/category";
 import { FaSignOutAlt, FaPlus } from "react-icons/fa";
 import { useUser } from "../../provider/token";
-import React from "react";
+import React,{useEffect} from "react";
 import AccordionCustom from "../../components/AccordionCustom";
 
 const Manager = () => {
-  const { menu, addCategory } = useMenu();
-  const { logout } = useUser();
+  const { menu, addCategory,  getMenu} = useMenu();
+  const { logout,userId } = useUser();
+
+
+  useEffect(() => {
+
+    getMenu(userId);
+  }, []);
 
   return (
     <Styled>

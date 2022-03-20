@@ -3,22 +3,15 @@ import React, { createContext, useState, useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
 import _ from "lodash";
 import { api, endpoints } from "../../services";
+import {useUser} from "../token"
+import {toast} from "react-toastify"
 
 
 
 const MenuContext = createContext([]);
 
-const initialCategory = {
-  id: 0,
-  category: "Nova Categoria",
-  description: "",
-  active: false,
-  position: 0,
-  items: [],
-};
 
 const initialItem = {
-  id: 0,
   title: "Novo Item",
   price: "0,00",
   desc: "",
@@ -28,32 +21,40 @@ const initialItem = {
 
 export const MenuProvider = ({ children }) => {
   const [menu, setMenu] = useState([]);
- 
+ const {configs, userId}= useUser()
 
   const getMenu = (id) => {
-
-
     api().get(endpoints.user.getData(id)).then((res) => {
-
-      console.log(res.data.categories)
-
       setMenu(res.data.categories)})
-    
   };
 
   // --------------------------------------- CATEGORY FUNCIONS --------------------------------------------
 
   const addCategory = () => {
-    let newCategory = _.cloneDeep(initialCategory);
-
-    newCategory.id = uuidv4();
-    newCategory.position = menu.length;
-
-    setMenu([...menu, newCategory]);
+    let newCategory = {
+        user: userId,
+        position: menu.length +1,
+        category: "Nova Categoria",
+        description: "hjhj",
+        active: false,
+        
+    };
+    api().post(endpoints.category.post,newCategory,configs).then(res=>{    
+      newCategory.id = res.data?.id
+      newCategory.items = []
+      setMenu([...menu, newCategory])
+    
+    }).catch(err=>{toast.error("Erro, tente novamente!")})
   };
 
   const removeCategory = (id) => {
     let rest = menu.filter((it) => it.id !== id);
+
+    api().delete(endpoints.category.delete(id),configs).then(
+      res=> toast.success("Categoria Deletada!")
+    ).catch(
+      err=>{toast.error("Erro, tente novamente!")}
+    )
 
     setMenu(rest);
   };
@@ -61,35 +62,60 @@ export const MenuProvider = ({ children }) => {
   const moveCategory = (index, direction) => {
     let newMenu = _.cloneDeep(menu);
     let selected = newMenu[index];
+    let selectedId = selected.id
     let posSelected = selected.position;
+
+
+
+
+    //  ========================== Continuar aqui
 
     if (direction === "up") {
       let before = newMenu[index - 1];
+      let beforeId = before.id
       let posBefore = before.position;
 
       newMenu[index].position = posBefore;
       newMenu[index - 1].position = posSelected;
       newMenu[index] = before;
       newMenu[index - 1] = selected;
+
+      let payloadBefore = posBefore
+      let payloadSelected = posSelected
+
+     api().patch(endpoints.category.patch(beforeId), payloadBefore, configs)
+     api().patch(endpoints.category.patch(selectedId), payloadSelected, configs)
+
+
     }
     if (direction === "down") {
       let after = menu[index + 1];
+      let afterId = after.id
       let posAfter = after.position;
 
       newMenu[index].position = posAfter;
       newMenu[index + 1].position = posSelected;
       newMenu[index] = after;
       newMenu[index + 1] = selected;
-    }
 
+      let payloadAfter = posAfter
+      let payloadSelected = posSelected
+
+      api().patch(endpoints.category.patch(afterId), payloadAfter, configs)
+      api().patch(endpoints.category.patch(selectedId), payloadSelected, configs)
+
+
+
+    }
     setMenu(newMenu);
   };
 
   const toogleCategoryStatus = (index) => {
     const newMenu = _.cloneDeep(menu);
-
     newMenu[index].active = !newMenu[index].active;
-
+    let categoryId = newMenu[index].id
+    let payload = newMenu[index].active
+    api().patch(endpoints.category.patch(categoryId),{active: payload},configs)
     setMenu(newMenu);
   };
 

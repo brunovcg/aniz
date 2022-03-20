@@ -9,7 +9,8 @@ export const UserProvider = ({ children }) => {
   const [token, setToken] = useState(
     JSON.parse(sessionStorage.getItem("@menu-manager:token")) || ""
   );
-  const [headers, setHeaders] = useState({ Authorization: "Token " + token });
+  const [userId,setUserId]= useState(JSON.parse(sessionStorage.getItem("@menu-manager:userId")) || 0)
+  const [configs, setConfigs] = useState({headers:{ Authorization: "Token " + token }});
 
   const navigate = useNavigate();
 
@@ -31,7 +32,12 @@ export const UserProvider = ({ children }) => {
           "@menu-manager:token",
           JSON.stringify(res.data.token)
         );
+        sessionStorage.setItem(
+          "@menu-manager:userId",
+          JSON.stringify(res.data.user_id)
+        );
         setToken(res.data.token);
+        setUserId(res.data.user_id)
         navigate("/manager");
         toast.success("Bemvindo!");
       })
@@ -47,11 +53,11 @@ export const UserProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    setHeaders({ Authorization: "Token " + token });
+    setConfigs({headers:{ Authorization: "Token " + token }});
   }, [token]);
 
   return (
-    <UserContext.Provider value={{ token, getToken, logout, headers, login }}>
+    <UserContext.Provider value={{ token, getToken, logout, configs, login, userId}}>
       {children}
     </UserContext.Provider>
   );

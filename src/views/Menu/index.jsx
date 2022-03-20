@@ -5,20 +5,20 @@ import { useMenu } from "../../provider/menuProvider";
 import Button from "../../components/Button";
 import { useNavigate } from "react-router-dom";
 import {useParams} from "react-router-dom"
-import {useState, useEffect} from "react"
+import { useEffect} from "react"
 
 const Menu = () => {
   const { menu, getMenu } = useMenu();
   const navigate = useNavigate();
   const {userId} = useParams()
 
-  const [id, setId] = useState(userId)
+
 
 
   useEffect(() => {
 
-    getMenu(id);
-  }, [id]);
+    getMenu(userId);
+  }, [menu]);
 
 
   return (
