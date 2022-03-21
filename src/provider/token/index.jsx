@@ -39,7 +39,7 @@ export const UserProvider = ({ children }) => {
         setToken(res.data.token);
         setUserId(res.data.user_id)
         navigate("/manager");
-        toast.success("Bemvindo!");
+        toast.success("Bem vindo!");
       })
       .catch((err) => {
         if (!err.response) {
