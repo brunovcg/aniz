@@ -19,7 +19,7 @@ export const UserProvider = ({ children }) => {
   };
 
   const logout = () => {
-    navigate("/");
+    navigate(`/restaurante/${userId}`);
     setToken("");
     sessionStorage.clear();
   };

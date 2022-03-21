@@ -19,6 +19,7 @@ const Manager = () => {
 
   return (
     <Styled>
+      <button onClick={()=> console.log(menu)}>teste</button>
       <header>
         <h2>Menu Manager</h2>
         <Button
@@ -40,7 +41,7 @@ const Manager = () => {
 
         <AccordionCustom
           margin="10px 0 0 0"
-          list={menu}
+          list={menu.sort((a,b)=> a.position-b.position)}
           Component={Category}
           idKey={"id"}
           titleKey={"category"}

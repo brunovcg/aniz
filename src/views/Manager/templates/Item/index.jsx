@@ -7,7 +7,7 @@ import { useMenu } from "../../../../provider/menuProvider";
 import { useModal } from "../../../../provider/modal";
 
 const Item = ({ item, index, itemsLength, categoryIndex }) => {
-  const [disabled, setDisabled] = useState(false);
+  const [disabled, setDisabled] = useState(!item.active);
 
   const { toogleItemStatus, moveItem, removeItem, modifyItem } = useMenu();
   const { openModal, modalReset } = useModal();

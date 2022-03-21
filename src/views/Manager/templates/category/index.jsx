@@ -28,7 +28,7 @@ const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
   const titleRef = useRef(null);
   const descriptionRef = useRef(null);
 
-  const [disabled, setDisabled] = useState(false);
+  const [disabled, setDisabled] = useState(!item.active);
 
   const handleDisable = (index) => {
     toogleCategoryStatus(index);
@@ -139,7 +139,7 @@ const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
           disabled={disabled}
           fontSize="14px"
           value={item?.description}
-          onClick={() => handleClick("desc", descriptionRef.current.inputValue)}
+          onClick={() => handleClick("description", descriptionRef.current.inputValue)}
           keyValue="desc"
           index={index}
         />
@@ -152,7 +152,7 @@ const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
             generalColor="var(--green)"
             fontFamily="arial"
             fontSize="16px"
-            list={item?.items}
+            list={item?.items.sort((a,b)=> a.position - b.position)}
             Component={Item}
             idKey={"id"}
             titleKey={"title"}

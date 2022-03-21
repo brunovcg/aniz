@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const endpoints = {
-  baseurl: "http://localhost:8001/api/",
+  baseurl: "http://localhost:8000/api/",
   user: {
     login: "login/",
     signup: "signup/",
