@@ -152,7 +152,7 @@ const Category = React.forwardRef(({ item, index, itemsLength }, ref) => {
             generalColor="var(--green)"
             fontFamily="arial"
             fontSize="16px"
-            list={item?.items.sort((a,b)=> a.position - b.position)}
+            list={item?.items}
             Component={Item}
             idKey={"id"}
             titleKey={"title"}

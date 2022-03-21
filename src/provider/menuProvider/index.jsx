@@ -14,7 +14,16 @@ export const MenuProvider = ({ children }) => {
     api()
       .get(endpoints.user.getData(id))
       .then((res) => {
-        setMenu(res.data.categories);
+        let sortedMenu = res.data.categories.sort(
+          (a, b) => a.position - b.position
+        );
+        sortedMenu.forEach(
+          (category, index) =>
+            (sortedMenu[index].items = sortedMenu[index].items.sort(
+              (a, b) => a.position - b.position
+            ))
+        );
+        setMenu(sortedMenu);
       });
   };
 
@@ -28,6 +37,7 @@ export const MenuProvider = ({ children }) => {
       description: "hjhj",
       active: false,
     };
+
     api()
       .post(endpoints.category.post, newCategory, configs)
       .then((res) => {
@@ -40,12 +50,48 @@ export const MenuProvider = ({ children }) => {
       });
   };
 
+  // -------------------------------------------------------------------------------------
+  const rePosition = (list, type, categoryIndex) => {
+    let sortedMenu = list;
+
+    if (type === "category") {
+      sortedMenu.forEach((category, index) => (category.position = index));
+
+      sortedMenu.forEach((item, index) => {
+        api().patch(
+          endpoints[type].patch(item.id),
+          { position: index },
+          configs
+        );
+      });
+    }
+
+    if (type === "item") {
+      sortedMenu[categoryIndex].items.forEach(
+        (item, index) =>
+          (sortedMenu[categoryIndex].items[index].position = index)
+      );
+
+      sortedMenu[categoryIndex].items.forEach((item, index) => {
+        api().patch(
+          endpoints[type].patch(item.id),
+          { position: index },
+          configs
+        );
+      });
+    }
+
+    setMenu(sortedMenu);
+  };
+
+  // -------------------------------
+
   const removeCategory = (id) => {
     let rest = menu.filter((it) => it.id !== id);
 
     api()
       .delete(endpoints.category.delete(id), configs)
-      .then((res) => setMenu(rest))
+      .then((res) => rePosition(rest, "category"))
       .catch((err) => {
         toast.error("Erro, tente novamente!");
       });
@@ -193,9 +239,11 @@ export const MenuProvider = ({ children }) => {
     api()
       .delete(endpoints.item.delete(id), configs)
       .then((res) => {
-        setMenu(rest);
+        rePosition(rest, "item", categoryIndex);
       })
-      .catch((err) => toast.error("Problemas no servidor, tente mais tarde."));
+      .catch((err) =>
+        toast.error("Problemas no servidor, tente mais tardexxxxx.")
+      );
   };
 
   // -------------------------------------------------------------------------
@@ -219,9 +267,6 @@ export const MenuProvider = ({ children }) => {
       let payloadBefore = { position: posSelected };
       let payloadSelected = { position: posBefore };
 
-      console.log(payloadBefore)
-      console.log(beforeId)
-
       api().patch(endpoints.item.patch(beforeId), payloadBefore, configs);
       api().patch(endpoints.item.patch(selectedId), payloadSelected, configs);
     }
@@ -230,8 +275,6 @@ export const MenuProvider = ({ children }) => {
       let after = menu[categoryIndex].items[index + 1];
       let afterId = after.id;
       let posAfter = after.position;
-
-     
 
       newMenu[categoryIndex].items[index].position = posAfter;
       newMenu[categoryIndex].items[index + 1].position = posSelected;
