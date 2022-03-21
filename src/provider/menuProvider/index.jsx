@@ -34,7 +34,7 @@ export const MenuProvider = ({ children }) => {
       user: userId,
       position: menu.length > 0 ? menu[menu.length - 1].position + 1 : 0,
       category: "Nova Categoria",
-      description: "hjhj",
+      description: "",
       active: false,
     };
 
