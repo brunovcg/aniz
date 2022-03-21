@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const endpoints = {
-  baseurl: "http://localhost:8000/api/",
+  baseurl: "https://menu-manager-backend.herokuapp.com/api/",
   user: {
     login: "login/",
     signup: "signup/",

@@ -1,0 +1,584 @@
+[
+  {
+    "category": "Almoço",
+    "description": "Escolha 2 acompanhamentos - (Exceto Espaguete à Bolonhesa)",
+    "active": true,
+    "position": 1,
+    "items": [
+      {
+        "title": "Strogonoff de Frango",
+        "price": "19,90",
+        "desc": "Filé de peito de frango, cortado em cubos com molho à base de mostarda e ketchup",
+        "active": true,
+        "position": 1
+      },
+
+      {
+        "title": "Espaguete à bolonhesa",
+        "price": "19,90",
+        "desc": "Massa ao molho de tomate e carne moída",
+        "active": true,
+        "position": 2
+  
+      },
+      {
+        "title": "Frango grelhado",
+        "price": "19,90",
+        "desc": "Filé de peito de frango grelhado",
+        "active": true,
+        "position": 3
+  
+      },
+      {
+        "title": "Frango à parmegiana",
+        "price": "21,90",
+        "desc": "Filé de peito de frango empanado coberto com delicioso molho de tomate",
+        "active": true,
+        "position": 4
+     
+      },
+      {
+        "title": "Frango com molho de mostarda",
+        "price": "21,90",
+        "desc": "Filé de peito de frango grelhado acompanhado por delicioso molho de mostarda",
+        "active": true,
+        "position": 5
+    
+      },
+      {
+        "title": "Bife empanado",
+        "price": "25,90",
+        "desc": "Bife empanado na farinha",
+        "active": true,
+        "position": 6
+     
+      },
+      {
+
+        "title": "Bife à parmegiana",
+        "price": "26,90",
+        "desc": "Filé empanado com molho de tomate",
+        "active": true,
+        "position": 7
+    
+      },
+      {
+        "title": "Bife ao molho de mostarda",
+        "price": "26,90",
+        "desc": "Bife grelhado, acompanhado de molho de mostarda",
+        "active": true,
+        "position": 8
+   
+      },
+      {
+        "title": "Carne de sol do sertão",
+        "price": "26,90",
+        "desc": "Cubos de Carne de Sol acebolada",
+        "active": true,
+        "position": 9
+      },
+      {
+        "title": "Maminha grelhada",
+        "price": "26,90",
+        "desc": "Maminha grelhada na chapa",
+        "active": true,
+        "position": 10
+    
+      },
+      {
+        "title": "Filé de tilápia grelhada",
+        "price": "31,90",
+        "desc": "Filé de tilápia grelhado",
+        "active": true,
+        "position": 11
+      
+      }
+    ]
+  },
+  {
+    "category": "Acompanhamentos",
+    "description": "",
+    "position": 2,
+    "active": true,
+    "items": [
+      {
+        "title": "Arroz Branco",
+        "desc": "",
+        "price": "",
+        "active": true,
+        "position": 1
+      },
+      {
+        "title": "Arroz integral",
+        "desc": "",
+        "price": "",
+        "active": true,
+        "position": 2
+      },
+      {
+        "title": "Arroz com brócolis",
+        "desc": "",
+        "price": "",
+        "active": true,
+        "position": 3
+      },
+      {
+        "title": "Arroz com cenoura",
+        "desc": "",
+        "price": "",
+        "active": true,
+        "position": 4
+      },
+      {
+        "title": "Batata frita",
+        "desc": "",
+        "price": "",
+        "active": true,
+        "position": 5
+      },
+      {
+        "title": "Feijão carioca",
+        "desc": "",
+        "price": "",
+        "active": true,
+        "position": 6
+      },
+      {
+        "title": "Feijão verde",
+        "desc": "",
+        "price": "",
+        "active": true,
+        "position": 7
+      },
+      {
+        "title": "Macarrão espaguete na manteiga",
+        "desc": "",
+        "price": "",
+        "active": true,
+        "position": 8
+      },
+      {
+        "title": "Purê de batata",
+        "desc": "",
+        "price": "",
+        "active": true,
+        "position": 9
+      },
+      {
+        "title": "Salada Aniz",
+        "active": true,
+        "desc": "(Mix de folhas, cenoura ralada, repolho roxo, tomatinhos)",
+        "price": "",
+        "position": 10
+      },
+      {
+        "title": "Vinagrete e farofa",
+        "desc": "",
+        "price": "",
+        "active": true,
+        "position": 11
+      }
+    ]
+  },
+  {
+    "category": "Saladas",
+    "description" : "isso é uma descrição2",
+    "active": true,
+    "position": 3,
+    "items": [
+      {
+        "title": "Salada de Camarão",
+        "desc": "",
+        "price": "27,90",
+        "active": true,
+        "position": 1
+      },
+      {
+        "title": "Salada de Frango",
+        "desc": "",
+        "price": "23,90",
+        "active": true,
+        "position": 2
+      }
+    ]
+  },
+  {
+    "category": "Da Nossa Cozinha",
+    "description": "",
+    "active": true,
+    "position": 4,
+    "items": [
+      {
+        "title": "Cuscuz à pizzaiolo",
+        "desc": "",
+        "price": "10,90",
+        "active": true,
+        "position": 1
+      },
+      {
+        "title": "Cuscuz com Charque e queijo",
+        "desc": "",
+        "price": "10,90",
+        "active": true,
+        "position": 2
+      },
+      {
+        "title": "Cuscuz com ovo",
+        "desc": "",
+        "price": "8,90",
+        "active": true,
+        "position": 3
+      },
+      {
+        "title": "Cuscuz simples apenas com manteiga derretida",
+        "desc": "",
+        "price": "7,90",
+        "active": true,
+        "position": 4
+      },
+      {
+        "title": "Omelete de frango",
+        "desc": "",
+        "price": "13,90",
+        "active": true,
+        "position": 5
+      },
+      {
+        "title": "Omelete de queijo mussarela, tomate e orégano",
+        "desc": "",
+        "price": "10,90",
+        "active": true,
+        "position": 6
+      },
+      {
+        "title": "Omelete misto de queijo e presunto",
+        "desc": "",
+        "price": "11,90",
+        "active": true,
+        "position": 7
+      },
+      {
+        "title": "Tapioca de Coco e queijo coalho",
+        "desc": "",
+        "price": "7,90",
+        "active": true,
+        "position": 8
+      },
+      {
+        "title": "Tapioca de Frango com queijo coalho",
+        "desc": "",
+        "price": "9,90",
+        "active": true,
+        "position": 9
+      },
+      {
+        "title": "Tapioca de queijo coalho",
+        "desc": "",
+        "price": "6,90",
+        "active": true,
+        "position": 10
+      },
+      {
+        "title": "Tapioca de queijo e presunto",
+        "desc": "",
+        "price": "7,50",
+        "active": true,
+        "position": 11
+      }
+    ]
+  },
+  {
+    "category": "Sopas",
+    "description" : "isso é uma descrição2",
+    "position": 5,
+    "active": true,
+    "items": [
+      {
+        "title": "Sopa do dia",
+        "active": true,
+        "desc": "Consulte a opção do dia",
+        "price": "7,50",
+        "position": 1
+      }
+    ]
+  },
+  {
+    "category": "Salgados",
+    "description" : "isso é uma descrição2",
+    "position": 6,
+    "active": true,
+    "items": [
+      {
+        "title": "Cachorrinho",
+        "desc": "",
+        "price": "6,00",
+        "active": true,
+        "position": 1
+      },
+      {
+        "title": "Coxinha",
+        "price": "7,00",
+        "desc": "",
+        "active": true,
+        "position": 2
+      },
+      {
+        "title": "Croissant de Frango com requeijão",
+        "price": "8,90",
+        "active": true,
+        "desc": "",
+        "position": 3
+      },
+      {
+        "title": "Croissant Napolitano",
+        "desc" : "",
+        "price": "7,90",
+        "active": true,
+        "position": 4
+      },
+      {
+        "title": "Enroladinho de salsicha",
+        "desc" : "",
+        "price": "6,00",
+        "active": true,
+        "position": 5
+       
+      },
+      {
+        "title": "Folhado de camarão",
+        "price": "7,00",
+        "desc": "",
+        "active": true,
+        "position": 6
+      },
+      {
+        "title": "Folhado de Frango",
+        "price": "7,00",
+        "desc": "",
+        "active": true,
+        "position": 7
+      },
+      {
+        "title": "Folhado de Queijo",
+        "desc" : "",
+        "price": "7,00",
+        "active": true,
+        "position": 8
+      },
+      {
+        "title": "Ovo mexido/ frito",
+        "price": "2,00",
+        "desc": "",
+        "active": true,
+        "position": 9
+      },
+      {
+        "title": "Pão na chapa",
+        "price": "4,00",
+        "desc": "",
+        "active": true,
+        "position": 10
+      },
+      {
+        "title": "Pastel de forno de queijo",
+        "price": "6,00",
+        "desc": "",
+        "active": true,
+        "position": 12
+      },
+      {
+        "title": "Pastel de queijo",
+        "desc" : "",
+        "price": "5,00",
+        "active": true,
+        "position": 19
+      },
+      {
+        "title": "Pão na chapa com ovo",
+        "desc" : "",
+        "price": "5,50",
+        "active": true,
+        "position": 11
+      },
+      {
+        "title": "Pão pizza calabresa",
+        "price": "5,50",
+        "desc": "",
+        "active": true,
+        "position": 13
+      },
+      {
+        "title": "Pastel de forno de frango",
+        "price": "6,00",
+        "desc": "",
+        "active": true,
+        "position": 14 
+      },
+      {
+        "title": "Pastel de forno de camarão",
+        "price": "7,00",
+        "desc": "",
+        "active": true,
+        "position": 15
+      },
+      {
+        "title": "Sanduíche de frango com queijo e salada em pão de leite",
+        "price": "10,90",
+        "desc": "",
+        "active": true,
+        "position": 16
+      },
+      {
+        "title": "Sanduíche de queijo e salada em pão baguete",
+        "price": "8,90",
+        "desc": "",
+        "active": true,
+        "position": 17
+      },
+      {
+        "title": "Sanduíche misto de pão baguete",
+        "price": "8,90",
+        "desc": "",
+        "active": true,
+        "position": 18
+      }
+    ]
+  },
+  {
+    "category": "Doces",
+    "position": 7,
+    "description": "",
+    "active": true,
+    "items": [
+      {
+        "title": "Bolo do dia",
+        "desc": "Cenoura, Brigadeiro, Laranja, Churros",
+        "price": "6,00",
+        "active": true,
+        "position": 1
+      },
+      {
+        "title": "Brownie",
+        "price": "6,00",
+        "desc": "",
+        "active": true,
+        "position": 2
+      },
+      {
+        "title": "Folhado de Limão",
+        "price": "6,00",
+        "desc": "",
+        "active": true,
+        "position": 3
+      },
+      {
+        "title": "Palha Italiana",
+        "price": "3,00",
+        "desc": "",
+        "active": true,
+        "position": 4
+
+      },
+      {
+        "title": "Tarteletes",
+        "desc": "Escolha o sabor: Leite condensado, Limão, Brigadeiro",
+        "price": "4,00",
+        "active": true,
+        "position": 5
+      },
+      {
+        "title": "Torta Cookie Recheada de Brigadeiro",
+        "price": "9,90",
+        "desc": "",
+        "active": true,
+        "position": 6
+      },
+      {
+        "title": "Torta Cookie Recheada de Doce de Leite",
+        "price": "9,90",
+        "desc": "",
+        "active": true,
+        "position": 7
+      },
+      {
+        "title": "Torta Cookie Recheada de Nutella",
+        "price": "10,90",
+        "desc": "",
+        "active": true,
+        "position": 8
+      },
+      {
+        "title": "Tortinha de Morango",
+        "price": "7,00",
+        "desc": "",
+        "active": true,
+        "position": 9
+      }
+    ]
+  },
+  {
+    "category": "Bebidas",
+    "active": true,
+    "position": 8,
+    "description": "",
+    "items": [
+      {
+        "title": "Água (500ml)",
+        "desc": "",
+        "price": "3,00",
+        "active": true,
+        "position": 1
+      },
+      {
+        "title": "Café Americano",
+        "desc": "",
+        "price": "4,60",
+        "active": true,
+        "position": 2
+      },
+      {
+        "title": "Café com leite",
+        "desc": "",
+        "price": "5,50",
+        "active": true,
+        "position": 3
+      },
+      {
+        "title": "Café Espresso",
+        "desc": "",
+        "price": "3,50",
+        "active": true,
+        "position": 4
+      },
+      {
+        "title": "Café Espresso Duplo",
+        "desc": "",
+        "price": "6,50",
+        "active": true,
+        "position": 5
+      },
+      {
+        "title": "Refrigerante (Lata)",
+        "desc": "",
+        "price": "5,90",
+        "active": true,
+        "position": 6
+      },
+      {
+        "title": "Suco de Laranja Natural (500ml)",
+        "desc": "",
+        "price": "6,90",
+        "active": true,
+        "position": 7
+   
+      },
+      {
+        "title": "Suco de Laranja Natural (300ml)",
+        "desc": "",
+        "price": "5,00",
+        "active": true,
+        "position": 8
+      }
+    ]
+  }
+]

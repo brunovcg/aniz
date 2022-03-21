@@ -1,7 +1,6 @@
 export const MENU = [
   {
     id: 1,
-  
     category: "Almoço",
     description: "Escolha 2 acompanhamentos - (Exceto Espaguete à Bolonhesa)",
     active: true,
@@ -203,7 +202,6 @@ export const MENU = [
   },
   {
     id: 3,
-   
     category: "Saladas",
     active: true,
     position: 3,

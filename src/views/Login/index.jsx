@@ -3,17 +3,15 @@ import Button from "../../components/Button";
 import Input from "../../components/Input";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaArrowAltCircleLeft, FaCheck } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 import {useUser} from "../../provider/token"
-
-
 
 const Login = () => {
   const [username, setUsername] = useState({ text: "", error: false });
   const [password, setPassword] = useState({ text: "", error: false });
 
 
-  const {login} = useUser()
+  const {login, token, userId} = useUser()
 
   const navigate = useNavigate();
 
@@ -32,19 +30,14 @@ const Login = () => {
     }
   };
 
+  if (token){
+    navigate(`/manager/${userId}`)
+  }
+
   return (
     <Styled>
       <div className="transparent">
         <div className="header">
-          <Button
-            onClick={() => navigate("/")}
-            circle
-            width="60px"
-            height="60px"
-            fontSize="30px"
-          >
-            <FaArrowAltCircleLeft />
-          </Button>
         </div>
         <h2>LOGIN</h2>
 

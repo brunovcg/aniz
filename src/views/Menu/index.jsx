@@ -4,22 +4,21 @@ import { FaInstagram } from "react-icons/fa";
 import { useMenu } from "../../provider/menuProvider";
 import Button from "../../components/Button";
 import { useNavigate } from "react-router-dom";
-import {useParams} from "react-router-dom"
-import { useEffect} from "react"
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { FaBars } from "react-icons/fa";
+import { useUser } from "../../provider/token";
 
 const Menu = () => {
   const { menu, getMenu } = useMenu();
+  const { token } = useUser();
   const navigate = useNavigate();
-  const {userId} = useParams()
-
-
-
+  const { userId } = useParams();
 
   useEffect(() => {
-
     getMenu(userId);
+    /* eslint-disable-next-line*/
   }, [menu]);
-
 
   return (
     <Styled>
@@ -37,11 +36,27 @@ const Menu = () => {
               </span>
             </a>
           </div>
+
+          {token && (
+            <Button
+              width="40px"
+              height="40px"
+              fontSize="20px"
+              margin="0 50px"
+              backgroundColor="var(--green)"
+              circle
+              onClick={() => {
+                navigate(`/manager/`);
+              }}
+            >
+              <FaBars />
+            </Button>
+          )}
         </div>
         <div className="box">
           {menu
             .filter((item) => item.active)
-            .sort((a,b)=>a.position-b.position)
+            .sort((a, b) => a.position - b.position)
             .map((category) => (
               <section key={category.id}>
                 <div className="category-title-description">
@@ -53,7 +68,8 @@ const Menu = () => {
                   )}
                 </div>
                 {category.items
-                  .filter((item) => item.active).sort((a,b)=>a.position-b.position)
+                  .filter((item) => item.active)
+                  .sort((a, b) => a.position - b.position)
                   .map((item) => (
                     <article key={item.id}>
                       <div className="title-price">

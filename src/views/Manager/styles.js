@@ -14,13 +14,18 @@ const Styled = styled.div`
   header {
     display: flex;
     width: 100%;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 15vh;
 
+    .button-box{
+      display: flex;
+    }
+
     h2 {
       @media (max-width: ${`${mobileBreakpoint}px`}) {
-        font-size: 35px;
+        font-size: 40px;
         width: 80%;
         text-align: center;
       }
