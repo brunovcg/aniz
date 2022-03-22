@@ -3,7 +3,7 @@ import styled from "styled-components";
 const { mobileBreakpoint } = configs;
 
 const Styled = styled.div`
-  background-image: url(${configs.backgroundImage});
+  background-image: url(${configs.backgroundImageAlt});
   background-repeat: repeat;
   background-size: 100vw auto;
   background-attachment: scroll;
@@ -12,11 +12,12 @@ const Styled = styled.div`
   .transparent {
     width: 100%;
     min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 250px;
 
     .logo-insta {
       @media (max-width: ${`${mobileBreakpoint}px`}) {
@@ -27,7 +28,7 @@ const Styled = styled.div`
         flex-direction: column;
       }
 
-      .icon {
+      /* .icon {
         margin: 10px 0;
         width: 100%;
         display: flex;
@@ -49,22 +50,9 @@ const Styled = styled.div`
             margin-left: 10px;
           }
         }
-      }
+      } */
 
-      .logo-box {
-        display: flex;
-        justify-content: center;
-        background-color: rgba(255, 255, 255, 0.8);
-        margin-top: 20px;
-        border-radius: 30px;
-        img {
-          max-width: 80%;
-        }
-
-        @media (max-width: ${`${mobileBreakpoint}px`}) {
-          width: 70%;
-        }
-      }
+      
     }
 
     .box {
