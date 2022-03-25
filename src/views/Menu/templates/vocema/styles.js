@@ -51,11 +51,12 @@ const Styled = styled.div`
       .logo-box {
         display: flex;
         justify-content: center;
-        background-color: rgba(255, 255, 255, 0.8);
+        /* background-color: rgba(255, 255, 255, 0.8); */
         margin-top: 20px;
         border-radius: 30px;
         img {
           max-width: 40%;
+          border-radius: 30px;
         }
 
         @media (max-width: ${`${mobileBreakpoint}px`}) {

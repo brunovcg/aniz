@@ -2,17 +2,17 @@ import styled from "styled-components";
 import { configs } from "../../configs";
 
 const Styled = styled.div`
-  background-image: url(${configs.backgroundImage});
-  background-repeat: repeat;
+  /* background-image: url(${configs.backgroundImage}); */
+  /* background-repeat: repeat;
   background-size: 100vw auto;
-  background-attachment: scroll;
+  background-attachment: scroll; */
   width: 100%;
   height: 100vh;
 
   .transparent {
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(20, 20, 20, 0.65);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,7 +28,8 @@ const Styled = styled.div`
 
     h2 {
       color: var(--yellow);
-
+      font-family: "arial";
+      font-weight: bold;
       font-size: 40px;
     }
 
