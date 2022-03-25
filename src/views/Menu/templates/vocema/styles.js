@@ -1,18 +1,15 @@
-import { configs } from "../../configs";
+import { configs } from "../../../../configs";
 import styled from "styled-components";
 const { mobileBreakpoint } = configs;
 
 const Styled = styled.div`
-  background-image: url(${configs.backgroundImage});
-  background-repeat: repeat;
-  background-size: 100vw auto;
-  background-attachment: scroll;
+  background-color: #D65880;
   width: 100%;
 
   .transparent {
     width: 100%;
     min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.0);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,7 +55,7 @@ const Styled = styled.div`
         margin-top: 20px;
         border-radius: 30px;
         img {
-          max-width: 80%;
+          max-width: 40%;
         }
 
         @media (max-width: ${`${mobileBreakpoint}px`}) {
@@ -92,8 +89,8 @@ const Styled = styled.div`
           align-items: center;
           justify-content: center;
           .category-title {
-            color: var(--white);
-            background: var(--red);
+            color: #D65880;
+            background-color: #A6DBE0;
             padding: 5px 30px;
             border-radius: 20px;
             margin: 40px 0 0 0;
