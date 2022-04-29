@@ -3,7 +3,7 @@ import styled from "styled-components";
 const { mobileBreakpoint } = configs;
 
 const Styled = styled.div`
-  background-image: url(${props=> props.background});
+  background-image: url(${props=> props.webStyling.background});
   background-repeat: repeat;
   background-size: 100vw auto;
   background-attachment: scroll;
@@ -12,7 +12,8 @@ const Styled = styled.div`
   .transparent {
     width: 100%;
     min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: ${props=> { 
+      return `rgba(0, 0, 0, ${(props.webStyling.transparency_index)/100})`}};
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,7 +37,7 @@ const Styled = styled.div`
         align-items: center;
 
         a {
-          color: var(--white);
+          color: ${props=> props.webStyling.insta_color};
           display: flex;
           justify-content: center;
           align-items: center;
@@ -80,8 +81,8 @@ const Styled = styled.div`
           align-items: center;
           justify-content: center;
           .category-title {
-            color: var(--white);
-            background: var(--red);
+            color: ${props=> props.webStyling.category_color};
+            background: ${props=> props.webStyling.category_background};
             padding: 5px 30px;
             border-radius: 20px;
             margin: 40px 0 0 0;
@@ -91,7 +92,7 @@ const Styled = styled.div`
           .category-description {
             margin-top: 20px;
             font-size: 24px;
-            color: var(--yellow);
+            color: ${props=> props.webStyling.category_description_color};
             text-align: center;
 
             @media (max-width: ${`${mobileBreakpoint}px`}) {
@@ -112,8 +113,14 @@ const Styled = styled.div`
             display: flex;
             justify-content: space-between;
             font-size: 26px;
-            color: var(--white);
             font-weight: bold;
+            
+            .title{
+              color: ${props=> props.webStyling.item_color};
+            }
+            .price{
+              color: ${props=> props.webStyling.price_color};
+            }
 
             @media (max-width: ${`${mobileBreakpoint}px`}) {
               font-size: 18px;
@@ -130,7 +137,7 @@ const Styled = styled.div`
           }
 
           .desc {
-            color: var(--light-green);
+            color: ${props=> props.webStyling.item_description_color};
             font-size: 14px;
             font-weight: bold;
 

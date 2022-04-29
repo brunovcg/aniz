@@ -8,7 +8,18 @@ const MenuContext = createContext([]);
 
 export const MenuProvider = ({ children }) => {
   const [menu, setMenu] = useState([]);
-  const [userImages, setUserImage] = useState({ background: "", logo: "" });
+  const [userImages, setUserImages] = useState({ 
+    background: "", 
+    logo: "", 
+    insta_color: "#fff",
+	  category_color: "#ffffeb",
+	  category_background: "#A31A2E",
+	  category_description_color: "#E69C02",
+	  item_color: "#ffffeb",
+	  item_description_color: "#a4cf85",
+	  price_color: "#ffffeb",
+    transparency_index: 55
+   });
   const { configs, userId } = useUser();
 
   const getMenu = (id) => {
@@ -25,12 +36,37 @@ export const MenuProvider = ({ children }) => {
             ))
         );
         setMenu(sortedMenu);
-        setUserImage({
+        setUserImages({
           background: res.data.background,
           logo: res.data.logo,
+          insta_color: res.data.insta_color || userImages.insta_color,
+	        category_color: res.data.category_color || userImages.category_color,
+	        category_background: res.data.category_background || userImages.category_background,
+	        category_description_color: res.data.category_description_color || userImages.category_description_color,
+	        item_color: res.data.item_color || userImages.item_color,
+	        item_description_color: res.data.item_description_color || userImages.item_description_color,
+	        price_color: res.data.price_color || userImages.price_color,
+          transparency_index: res.data.transparency_index || userImages.transparency_index,
         });
       });
   };
+
+  const updateColors =(attr, value,id)=> {
+    let payload = {[attr] : value}
+    api().patch(endpoints.user.patch(id, payload, configs).then(res=> 
+      setUserImages({...userImages, [attr] : value})
+      ).catch((err) => {
+        toast.error("Erro, tente novamente!");
+      }))
+  }
+
+  const getUserImages =(id)=> {
+    api().patch(endpoints.user.images(id, configs).then(res=> {
+      setUserImages({...userImages, ...res})
+    }).catch((err) => {
+        toast.error("Erro, tente novamente!");
+      }))
+  }
 
   // --------------------------------------- CATEGORY FUNCIONS --------------------------------------------
 
@@ -333,6 +369,8 @@ export const MenuProvider = ({ children }) => {
         modifyItem,
         getMenu,
         userImages,
+        updateColors,
+        getUserImages
       }}
     >
       {children}

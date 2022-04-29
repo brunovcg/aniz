@@ -20,7 +20,7 @@ const Menu = () => {
   }, [userId]);
 
   return (
-    <Styled background={userImages.background}>
+    <Styled webStyling={userImages}>
       <div className="transparent">
         <div className="logo-insta">
         <figure className="logo-box">

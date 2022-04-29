@@ -6,6 +6,8 @@ export const endpoints = {
     login: "login/",
     signup: "signup/",
     getData: (id)=>`users/${id}/`,
+    patch: (id)=> `users/${id}/`,
+    images: (id)=> `users/images/${id}/`
   },
   category: {
     patch: (id)=>`categories/${id}/`,
