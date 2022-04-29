@@ -53,12 +53,14 @@ export const MenuProvider = ({ children }) => {
 
   const updateImages =(attr, value,id)=> {
     let payload = {[attr] : value}
-    console.log(payload)
-    // api().patch(endpoints.user.patch(id, payload, configs).then(res=> 
-    //   setUserImages({...userImages, [attr] : value})
-    //   ).catch((err) => {
-    //     toast.error("Erro, tente novamente!");
-    //   }))
+    console.log(payload,id)
+    api().patch(endpoints.user.images(id), payload, configs)
+    .then(res=> 
+      setUserImages({...userImages, [attr] : value})
+      ).catch((err) => {
+        toast.error("Erro, tente novamente!");
+      })
+      
   }
 
   const getUserImages =(id)=> {

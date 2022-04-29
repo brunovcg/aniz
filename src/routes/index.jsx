@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Menu from "../views/Menu_alt";
+import Menu from "../views/Menu";
 import Manager from "../views/Manager";
 import Login from "../views/Login";
 import Home from "../views/Home"

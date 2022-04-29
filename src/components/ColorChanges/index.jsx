@@ -12,7 +12,7 @@ import { FaArrowRight, FaCheck } from "react-icons/fa";
 const ColorChanges = () => {
   const navigate = useNavigate();
   const { userId } = useParams();
-  const { userImages, updateImages, getUserImages, setUserImages } = useMenu();
+  const { userImages, updateImages, setUserImages } = useMenu();
   const { openModal, modalReset } = useModal();
   const [temporaryImages, setTemporaryImages] = useState({
     background: userImages.background,
@@ -20,7 +20,6 @@ const ColorChanges = () => {
   });
 
   const changeImageSettings = (key, value) => {
-    // console.log({ ...userImages, [key]: value })
     setUserImages({ ...userImages, [key]: value });
   };
 
@@ -30,7 +29,7 @@ const ColorChanges = () => {
 
   const renderImg = (url) => (
     <div style={{ display: "flex", flexDirection: "column" }}>
-      <p style={{padding: "20px"}}>Pre-visualização</p>
+      <p style={{ padding: "20px" }}>Pre-visualização</p>
       <img src={url} alt="img_quebrada" />
     </div>
   );
@@ -44,7 +43,9 @@ const ColorChanges = () => {
       value: userImages.transparency_index,
       onChange: (evt) =>
         changeImageSettings("transparency_index", evt.target.value),
-      onBlur: (evt) => {},
+      onBlur: (evt) => {
+        updateImages("transparency_index", evt.target.value, userId);
+      },
     },
     {
       id: "insta_color",
@@ -56,8 +57,7 @@ const ColorChanges = () => {
         changeImageSettings("insta_color", evt.target.value);
       },
       onBlur: (evt) => {
-        console.log(evt.target.value);
-        // updateImages("insta_color", imageSettings.insta_color);
+        updateImages("insta_color", evt.target.value, userId);
       },
     },
     {
@@ -70,8 +70,7 @@ const ColorChanges = () => {
         changeImageSettings("category_color", evt.target.value);
       },
       onBlur: (evt) => {
-        console.log(evt.target.value);
-        // updateImages("insta_color", imageSettings.insta_color);
+        updateImages("insta_color", evt.target.value, userId);
       },
     },
     {
@@ -84,8 +83,7 @@ const ColorChanges = () => {
         changeImageSettings("category_background", evt.target.value);
       },
       onBlur: (evt) => {
-        console.log(evt.target.value);
-        // updateImages("insta_color", imageSettings.insta_color);
+        updateImages("category_background", evt.target.value, userId);
       },
     },
     {
@@ -98,8 +96,7 @@ const ColorChanges = () => {
         changeImageSettings("category_description_color", evt.target.value);
       },
       onBlur: (evt) => {
-        console.log(evt.target.value);
-        // updateImages("insta_color", imageSettings.insta_color);
+        updateImages("category_description_color", evt.target.value, userId);
       },
     },
     {
@@ -112,8 +109,7 @@ const ColorChanges = () => {
         changeImageSettings("item_color", evt.target.value);
       },
       onBlur: (evt) => {
-        console.log(evt.target.value);
-        // updateImages("insta_color", imageSettings.insta_color);
+        updateImages("item_color", evt.target.value, userId);
       },
     },
     {
@@ -126,8 +122,7 @@ const ColorChanges = () => {
         changeImageSettings("item_description_color", evt.target.value);
       },
       onBlur: (evt) => {
-        console.log(evt.target.value);
-        // updateImages("insta_color", imageSettings.insta_color);
+        updateImages("item_description_color", evt.target.value, userId);
       },
     },
     {
@@ -140,8 +135,7 @@ const ColorChanges = () => {
         changeImageSettings("price_color", evt.target.value);
       },
       onBlur: (evt) => {
-        console.log(evt.target.value);
-        // updateImages("insta_color", imageSettings.insta_color);
+        updateImages("price_color", evt.target.value, userId);
       },
     },
   ];
@@ -169,11 +163,11 @@ const ColorChanges = () => {
                     ...userImages,
                     background: evt.target.value,
                   });
+                  updateImages("background", evt.target.value, userId);
                   modalReset();
                 },
                 backgroundColor: "var(--green)",
               },
-
               {
                 text: <FaArrowRight />,
                 onClick: () => {
@@ -214,6 +208,7 @@ const ColorChanges = () => {
                     ...userImages,
                     logo: evt.target.value,
                   });
+                  updateImages("logo", evt.target.value, userId);
                   modalReset();
                 },
                 backgroundColor: "var(--green)",

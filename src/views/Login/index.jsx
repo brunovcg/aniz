@@ -5,13 +5,14 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaCheck } from "react-icons/fa";
 import {useUser} from "../../provider/token"
+import { useEffect } from "react";
 
 const Login = () => {
   const [username, setUsername] = useState({ text: "", error: false });
   const [password, setPassword] = useState({ text: "", error: false });
 
 
-  const {login, token, userId} = useUser()
+  const {login, token} = useUser()
 
   const navigate = useNavigate();
 
@@ -30,9 +31,13 @@ const Login = () => {
     }
   };
 
-  if (token){
-    navigate(`/manager/${userId}`)
-  }
+  useEffect(()=>{
+    if (token){
+      navigate(`/manager`)
+    }
+  },[])
+
+  
 
   return (
     <Styled>
