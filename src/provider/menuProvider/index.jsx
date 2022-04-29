@@ -8,6 +8,7 @@ const MenuContext = createContext([]);
 
 export const MenuProvider = ({ children }) => {
   const [menu, setMenu] = useState([]);
+  const [userImages, setUserImage] = useState({ background: "", logo: "" });
   const { configs, userId } = useUser();
 
   const getMenu = (id) => {
@@ -24,6 +25,10 @@ export const MenuProvider = ({ children }) => {
             ))
         );
         setMenu(sortedMenu);
+        setUserImage({
+          background: res.data.background,
+          logo: res.data.logo,
+        });
       });
   };
 
@@ -327,6 +332,7 @@ export const MenuProvider = ({ children }) => {
         addItem,
         modifyItem,
         getMenu,
+        userImages,
       }}
     >
       {children}

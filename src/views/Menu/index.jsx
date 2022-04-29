@@ -15,8 +15,7 @@ const Menu = () => {
 
   useEffect(() => {
     getMenu(userId);
-    /* eslint-disable-next-line*/
-  }, [menu]);
+  }, [getMenu, menu, userId]);
 
   return <>{renderOptions[userId]}</>;
 };

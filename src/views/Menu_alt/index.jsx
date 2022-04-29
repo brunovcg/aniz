@@ -1,5 +1,4 @@
 import Styled from "./styles";
-import logo from "../../assets/images/logo.png";
 import { FaInstagram } from "react-icons/fa";
 import { useMenu } from "../../provider/menuProvider";
 import Button from "../../components/Button";
@@ -10,7 +9,7 @@ import { FaBars } from "react-icons/fa";
 import { useUser } from "../../provider/token";
 
 const Menu = () => {
-  const { menu, getMenu } = useMenu();
+  const { menu, getMenu, userImages } = useMenu();
   const { token } = useUser();
   const navigate = useNavigate();
   const { userId } = useParams();
@@ -18,13 +17,16 @@ const Menu = () => {
   useEffect(() => {
     getMenu(userId);
     /* eslint-disable-next-line*/
-  }, [menu]);
+  }, [userId]);
 
   return (
-    <Styled>
+    <Styled background={userImages.background}>
       <div className="transparent">
         <div className="logo-insta">
-          {/* <div className="icon">
+        <figure className="logo-box">
+            <img src={userImages.logo} alt="logo" />
+          </figure>
+          <div className="icon">
             <a href="https://instagram.com/anizcozinha?utm_medium=copy_link">
               <FaInstagram />
               <span>
@@ -32,7 +34,7 @@ const Menu = () => {
                 {"    anizcozinha"}
               </span>
             </a>
-          </div> */}
+          </div>
 
           {token && (
             <Button

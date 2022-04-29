@@ -17,8 +17,7 @@ const Aniz = () => {
 
   useEffect(() => {
     getMenu(userId);
-    /* eslint-disable-next-line*/
-  }, [menu]);
+  }, [userId]);
 
   return (
     <Styled>
