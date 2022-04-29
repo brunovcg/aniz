@@ -37,6 +37,7 @@ const ColorInput = ({
           height: "40px",
           fontSize: "15px",
           paddingLeft: isUrl && "10px",
+          border: "var(--grey) 2px solid"
         }}
         id={id}
         type={type}
