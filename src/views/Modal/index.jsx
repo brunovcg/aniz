@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 
 const ModalCustom = () => {
-  const { show, setShow, modalTitle, modalContent, modalButtons } = useModal();
+  const { show, setShow, modalTitle, modalContent, modalButtons, closeButton } = useModal();
 
   return ReactDOM.createPortal(
     <Modal
@@ -18,7 +18,7 @@ const ModalCustom = () => {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header closeButton>
+      <Modal.Header >
         <Modal.Title>{modalTitle}</Modal.Title>
       </Modal.Header>
       <Modal.Body>{modalContent}</Modal.Body>
@@ -33,7 +33,7 @@ const ModalCustom = () => {
             backgroundColor={item.backgroundColor}
           >{item.text}</Button>
         ))}
-        <Button
+        {closeButton && <Button
           circle
           backgroundColor="var(--grey)"
           width="40px"
@@ -41,7 +41,7 @@ const ModalCustom = () => {
           onClick={() => setShow(false)}
         >
           <FaArrowRight/>
-        </Button>
+        </Button>}
       </Modal.Footer>
     </Modal>,
     document.getElementById("modal")

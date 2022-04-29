@@ -7,19 +7,25 @@ export const ModalProvider = ({ children }) => {
   const [modalTitle, setModalTitle] = useState("");
   const [modalContent, setModalContent] = useState("");
   const [modalButtons, setModalButtons] = useState([]);
+  const [closeButton, setCloseButton] = useState(true)
+
 
   const modalReset = () => {
     setShow(false)
     setModalTitle("");
     setModalContent("");
     setModalButtons([]);
+    setCloseButton(true)
   };
 
-  const openModal = (title, content, buttons) => {
+  const openModal = (title, content, buttons, closeButton=true) => {
     setShow(true)
     setModalTitle(title);
     setModalContent(content);
     setModalButtons(buttons);
+    if (!closeButton){
+      setCloseButton(false)
+    }
   }
 
   return (
@@ -31,7 +37,8 @@ export const ModalProvider = ({ children }) => {
         modalTitle,
         modalContent,
         modalButtons,
-        openModal
+        openModal,
+        closeButton
       }}
     >
       {children}

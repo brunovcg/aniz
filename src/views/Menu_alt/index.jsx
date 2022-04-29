@@ -5,8 +5,8 @@ import Button from "../../components/Button";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
-import { FaBars } from "react-icons/fa";
 import { useUser } from "../../provider/token";
+import ColorChanges from "../../components/ColorChanges";
 
 const Menu = () => {
   const { menu, getMenu, userImages } = useMenu();
@@ -23,9 +23,11 @@ const Menu = () => {
     <Styled webStyling={userImages}>
       <div className="transparent">
         <div className="logo-insta">
-        <figure className="logo-box">
-            <img src={userImages.logo} alt="logo" />
+          <figure className="logo-box">
+            <img src={userImages.logo} alt="IMAGEM LOGO QUEBRADA, SELECIONE OUTRA!" />
           </figure>
+
+          {token && <ColorChanges />}
           <div className="icon">
             <a href="https://instagram.com/anizcozinha?utm_medium=copy_link">
               <FaInstagram />
@@ -35,22 +37,6 @@ const Menu = () => {
               </span>
             </a>
           </div>
-
-          {token && (
-            <Button
-              width="40px"
-              height="40px"
-              fontSize="20px"
-              margin="0 50px"
-              backgroundColor="var(--green)"
-              circle
-              onClick={() => {
-                navigate(`/manager/`);
-              }}
-            >
-              <FaBars />
-            </Button>
-          )}
         </div>
         <div className="box">
           {menu

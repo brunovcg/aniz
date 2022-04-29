@@ -11,7 +11,7 @@ export const MenuProvider = ({ children }) => {
   const [userImages, setUserImages] = useState({ 
     background: "", 
     logo: "", 
-    insta_color: "#fff",
+    insta_color: "#ffffff",
 	  category_color: "#ffffeb",
 	  category_background: "#A31A2E",
 	  category_description_color: "#E69C02",
@@ -51,13 +51,14 @@ export const MenuProvider = ({ children }) => {
       });
   };
 
-  const updateColors =(attr, value,id)=> {
+  const updateImages =(attr, value,id)=> {
     let payload = {[attr] : value}
-    api().patch(endpoints.user.patch(id, payload, configs).then(res=> 
-      setUserImages({...userImages, [attr] : value})
-      ).catch((err) => {
-        toast.error("Erro, tente novamente!");
-      }))
+    console.log(payload)
+    // api().patch(endpoints.user.patch(id, payload, configs).then(res=> 
+    //   setUserImages({...userImages, [attr] : value})
+    //   ).catch((err) => {
+    //     toast.error("Erro, tente novamente!");
+    //   }))
   }
 
   const getUserImages =(id)=> {
@@ -368,8 +369,9 @@ export const MenuProvider = ({ children }) => {
         addItem,
         modifyItem,
         getMenu,
+        setUserImages,
         userImages,
-        updateColors,
+        updateImages,
         getUserImages
       }}
     >

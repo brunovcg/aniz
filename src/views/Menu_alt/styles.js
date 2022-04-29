@@ -3,7 +3,7 @@ import styled from "styled-components";
 const { mobileBreakpoint } = configs;
 
 const Styled = styled.div`
-  background-image: url(${props=> props.webStyling.background});
+  background-image: url(${(props) => props.webStyling.background});
   background-repeat: repeat;
   background-size: 100vw auto;
   background-attachment: scroll;
@@ -12,8 +12,9 @@ const Styled = styled.div`
   .transparent {
     width: 100%;
     min-height: 100vh;
-    background-color: ${props=> { 
-      return `rgba(0, 0, 0, ${(props.webStyling.transparency_index)/100})`}};
+    background-color: ${(props) => {
+      return `rgba(0, 0, 0, ${props.webStyling.transparency_index / 100})`;
+    }};
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,6 +30,18 @@ const Styled = styled.div`
         flex-direction: column;
       }
 
+      .logo-box {
+        width: 90%;
+
+        width: 80%;
+        img {
+          color: var(--white);
+          @media (max-width: ${`${mobileBreakpoint}px`}) {
+            width: 80%;
+          }
+        }
+      }
+
       .icon {
         margin: 10px 0;
         width: 100%;
@@ -37,7 +50,7 @@ const Styled = styled.div`
         align-items: center;
 
         a {
-          color: ${props=> props.webStyling.insta_color};
+          color: ${(props) => props.webStyling.insta_color};
           display: flex;
           justify-content: center;
           align-items: center;
@@ -52,8 +65,6 @@ const Styled = styled.div`
           }
         }
       }
-
-      
     }
 
     .box {
@@ -81,8 +92,8 @@ const Styled = styled.div`
           align-items: center;
           justify-content: center;
           .category-title {
-            color: ${props=> props.webStyling.category_color};
-            background: ${props=> props.webStyling.category_background};
+            color: ${(props) => props.webStyling.category_color};
+            background: ${(props) => props.webStyling.category_background};
             padding: 5px 30px;
             border-radius: 20px;
             margin: 40px 0 0 0;
@@ -92,7 +103,7 @@ const Styled = styled.div`
           .category-description {
             margin-top: 20px;
             font-size: 24px;
-            color: ${props=> props.webStyling.category_description_color};
+            color: ${(props) => props.webStyling.category_description_color};
             text-align: center;
 
             @media (max-width: ${`${mobileBreakpoint}px`}) {
@@ -114,12 +125,12 @@ const Styled = styled.div`
             justify-content: space-between;
             font-size: 26px;
             font-weight: bold;
-            
-            .title{
-              color: ${props=> props.webStyling.item_color};
+
+            .title {
+              color: ${(props) => props.webStyling.item_color};
             }
-            .price{
-              color: ${props=> props.webStyling.price_color};
+            .price {
+              color: ${(props) => props.webStyling.price_color};
             }
 
             @media (max-width: ${`${mobileBreakpoint}px`}) {
@@ -137,7 +148,7 @@ const Styled = styled.div`
           }
 
           .desc {
-            color: ${props=> props.webStyling.item_description_color};
+            color: ${(props) => props.webStyling.item_description_color};
             font-size: 14px;
             font-weight: bold;
 
