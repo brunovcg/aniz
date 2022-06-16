@@ -1,0 +1,818 @@
+[
+  {
+    "id": 1,
+    "items": [
+      {
+        "id": 9,
+        "title": "Carne de sol do sertão",
+        "desc": "Cubos de Carne de Sol acebolada",
+        "active": true,
+        "price": "26,90",
+        "position": 10
+      },
+      {
+        "id": 8,
+        "title": "Bife ao molho de mostarda",
+        "desc": "Bife grelhado, acompanhado de molho de mostarda",
+        "active": true,
+        "price": "26,90",
+        "position": 9
+      },
+      {
+        "id": 3,
+        "title": "Frango grelhado",
+        "desc": "Filé de peito de frango grelhado",
+        "active": true,
+        "price": "19,90",
+        "position": 4
+      },
+      {
+        "id": 11,
+        "title": "Filé de tilápia grelhada",
+        "desc": "Filé de tilápia grelhado",
+        "active": true,
+        "price": "31,90",
+        "position": 13
+      },
+      {
+        "id": 4,
+        "title": "Frango à parmegiana",
+        "desc": "Filé de peito de frango empanado coberto com delicioso molho de tomate",
+        "active": true,
+        "price": "21,90",
+        "position": 5
+      },
+      {
+        "id": 5,
+        "title": "Frango com molho de mostarda",
+        "desc": "Filé de peito de frango grelhado acompanhado por delicioso molho de mostarda",
+        "active": true,
+        "price": "21,90",
+        "position": 5
+      },
+      {
+        "id": 2,
+        "title": "Espaguete à bolonhesa",
+        "desc": "Massa ao molho de tomate e carne moída",
+        "active": true,
+        "price": "19,90",
+        "position": 3
+      },
+      {
+        "id": 1,
+        "title": "Strogonoff de Frango",
+        "desc": "Filé de peito de frango, cortado em cubos com molho à base de mostarda e ketchup",
+        "active": true,
+        "price": "19,90",
+        "position": 1
+      },
+      {
+        "id": 81,
+        "title": "Strogonoff de carne",
+        "desc": "Tiras carne envoltas em molho à base de ketchup e mostarda",
+        "active": true,
+        "price": "25,90",
+        "position": 6
+      },
+      {
+        "id": 7,
+        "title": "Bife à parmegiana",
+        "desc": "Filé empanado com molho de tomate",
+        "active": true,
+        "price": "26,90",
+        "position": 8
+      },
+      {
+        "id": 6,
+        "title": "Bife empanado",
+        "desc": "Bife empanado na farinha",
+        "active": true,
+        "price": "25,90",
+        "position": 7
+      },
+      {
+        "id": 80,
+        "title": "Panqueca Bolonhesa",
+        "desc": "Panquecas recheadas com carne moída e cobertas com nosso molho de tomate",
+        "active": true,
+        "price": "18,90",
+        "position": 0
+      },
+      {
+        "id": 10,
+        "title": "Maminha grelhada",
+        "desc": "Maminha grelhada na chapa",
+        "active": true,
+        "price": "26,90",
+        "position": 12
+      },
+      {
+        "id": 87,
+        "title": "Panqueca de Frango",
+        "desc": "Panquecas recheadas com frango desfiado, cobertas com molho de tomate.",
+        "active": true,
+        "price": "18,90",
+        "position": 1
+      },
+      {
+        "id": 88,
+        "title": "Strogonoff de Carne",
+        "desc": "",
+        "active": true,
+        "price": "25,90",
+        "position": 1
+      }
+    ],
+    "category": "Almoço",
+    "description": "Escolha 2 acompanhamentos - (Exceto Espaguete à Bolonhesa)",
+    "active": true,
+    "position": 0,
+    "user": 2
+  },
+  {
+    "id": 2,
+    "items": [
+      {
+        "id": 12,
+        "title": "Arroz Branco",
+        "desc": "",
+        "active": true,
+        "price": "",
+        "position": 0
+      },
+      {
+        "id": 22,
+        "title": "Vinagrete e farofa",
+        "desc": "",
+        "active": true,
+        "price": "",
+        "position": 10
+      },
+      {
+        "id": 19,
+        "title": "Macarrão espaguete na manteiga",
+        "desc": "",
+        "active": true,
+        "price": "",
+        "position": 7
+      },
+      {
+        "id": 13,
+        "title": "Arroz integral",
+        "desc": "",
+        "active": true,
+        "price": "",
+        "position": 1
+      },
+      {
+        "id": 20,
+        "title": "Purê de batata",
+        "desc": "",
+        "active": true,
+        "price": "",
+        "position": 8
+      },
+      {
+        "id": 21,
+        "title": "Salada Aniz",
+        "desc": "(Mix de folhas, cenoura ralada, repolho roxo, tomatinhos)",
+        "active": true,
+        "price": "",
+        "position": 9
+      },
+      {
+        "id": 14,
+        "title": "Arroz com brócolis",
+        "desc": "",
+        "active": true,
+        "price": "",
+        "position": 2
+      },
+      {
+        "id": 15,
+        "title": "Arroz com cenoura",
+        "desc": "",
+        "active": true,
+        "price": "",
+        "position": 3
+      },
+      {
+        "id": 16,
+        "title": "Batata frita",
+        "desc": "",
+        "active": true,
+        "price": "",
+        "position": 4
+      },
+      {
+        "id": 17,
+        "title": "Feijão carioca",
+        "desc": "",
+        "active": true,
+        "price": "",
+        "position": 5
+      },
+      {
+        "id": 18,
+        "title": "Feijão verde",
+        "desc": "",
+        "active": true,
+        "price": "",
+        "position": 6
+      }
+    ],
+    "category": "Acompanhamentos",
+    "description": "",
+    "active": true,
+    "position": 1,
+    "user": 2
+  },
+  {
+    "id": 3,
+    "items": [
+      {
+        "id": 23,
+        "title": "Salada de Camarão",
+        "desc": "",
+        "active": true,
+        "price": "27,90",
+        "position": 1
+      },
+      {
+        "id": 24,
+        "title": "Salada de Frango",
+        "desc": "",
+        "active": true,
+        "price": "23,90",
+        "position": 2
+      }
+    ],
+    "category": "Saladas",
+    "description": "",
+    "active": true,
+    "position": 2,
+    "user": 2
+  },
+  {
+    "id": 4,
+    "items": [
+      {
+        "id": 30,
+        "title": "Omelete de queijo mussarela, tomate e orégano",
+        "desc": "",
+        "active": true,
+        "price": "10,90",
+        "position": 6
+      },
+      {
+        "id": 25,
+        "title": "Cuscuz à pizzaiolo",
+        "desc": "",
+        "active": true,
+        "price": "10,90",
+        "position": 4
+      },
+      {
+        "id": 35,
+        "title": "Tapioca de queijo e presunto",
+        "desc": "",
+        "active": true,
+        "price": "7,50",
+        "position": 9
+      },
+      {
+        "id": 32,
+        "title": "Tapioca de Coco e queijo coalho",
+        "desc": "",
+        "active": true,
+        "price": "7,90",
+        "position": 10
+      },
+      {
+        "id": 34,
+        "title": "Tapioca de queijo coalho",
+        "desc": "",
+        "active": true,
+        "price": "6,90",
+        "position": 9
+      },
+      {
+        "id": 27,
+        "title": "Cuscuz com ovo",
+        "desc": "",
+        "active": true,
+        "price": "8,90",
+        "position": 2
+      },
+      {
+        "id": 33,
+        "title": "Tapioca de Frango com queijo coalho",
+        "desc": "",
+        "active": true,
+        "price": "9,90",
+        "position": 10
+      },
+      {
+        "id": 28,
+        "title": "Cuscuz simples apenas com manteiga derretida",
+        "desc": "",
+        "active": true,
+        "price": "7,90",
+        "position": 1
+      },
+      {
+        "id": 29,
+        "title": "Omelete de frango",
+        "desc": "",
+        "active": true,
+        "price": "13,90",
+        "position": 8
+      },
+      {
+        "id": 31,
+        "title": "Omelete misto de queijo e presunto",
+        "desc": "",
+        "active": true,
+        "price": "11,90",
+        "position": 7
+      },
+      {
+        "id": 26,
+        "title": "Cuscuz com Charque e queijo",
+        "desc": "",
+        "active": true,
+        "price": "10,90",
+        "position": 5
+      },
+      {
+        "id": 109,
+        "title": "Macaxeira com calabresa",
+        "desc": "Macaxeira cozinha com calabresa acebolada",
+        "active": true,
+        "price": "13,90",
+        "position": 13
+      },
+      {
+        "id": 110,
+        "title": "Macaxeira com queijo coalho",
+        "desc": "Macaxeira cozida com queijo coalho assado",
+        "active": true,
+        "price": "12,90",
+        "position": 10
+      },
+      {
+        "id": 107,
+        "title": "Macaxeira com carne de sol",
+        "desc": "Macaxeira cozida com carne de sol acebolada",
+        "active": true,
+        "price": "15,90",
+        "position": 13
+      },
+      {
+        "id": 108,
+        "title": "Cuscuz com Calabresa",
+        "desc": "Cuscuz acompanhado de calabresa assada acebolada",
+        "active": true,
+        "price": "10,90",
+        "position": 5
+      },
+      {
+        "id": 91,
+        "title": "Cuscuz com queijo coalho",
+        "desc": "",
+        "active": true,
+        "price": "10,90",
+        "position": 3
+      },
+      {
+        "id": 95,
+        "title": "Sanduíche Natural",
+        "desc": "",
+        "active": true,
+        "price": "10,90",
+        "position": 0
+      },
+      {
+        "id": 96,
+        "title": "Cachorro quente",
+        "desc": "Cachorro quente de salsicha no molho de tomate. Escolha os seus acompanhamentos: Vinagrete, Milho, Ervilha,  Queijo ralado, Batata palha",
+        "active": true,
+        "price": "8,00",
+        "position": 19
+      },
+      {
+        "id": 94,
+        "title": "Queijo Coalho assado",
+        "desc": "Fatia de queijo coalho assado",
+        "active": true,
+        "price": "5,00",
+        "position": 15
+      },
+      {
+        "id": 93,
+        "title": "Ovo Frito/ Mexido",
+        "desc": "",
+        "active": true,
+        "price": "2,00",
+        "position": 14
+      }
+    ],
+    "category": "Da Nossa Cozinha",
+    "description": "",
+    "active": true,
+    "position": 3,
+    "user": 2
+  },
+  {
+    "id": 13,
+    "items": [
+      {
+        "id": 99,
+        "title": "Canja de Galinha, Caldo Verde, Sopa de Feijão, Creme de Batata, Sopa de Carne",
+        "desc": "",
+        "active": true,
+        "price": "7,50",
+        "position": 0
+      }
+    ],
+    "category": "Sopas",
+    "description": "",
+    "active": true,
+    "position": 4,
+    "user": 2
+  },
+  {
+    "id": 7,
+    "items": [
+      {
+        "id": 57,
+        "title": "Brownie",
+        "desc": "",
+        "active": true,
+        "price": "6,00",
+        "position": 1
+      },
+      {
+        "id": 62,
+        "title": "Torta Cookie Recheada de Doce de Leite",
+        "desc": "",
+        "active": true,
+        "price": "9,90",
+        "position": 6
+      },
+      {
+        "id": 63,
+        "title": "Torta Cookie Recheada de Nutella",
+        "desc": "",
+        "active": true,
+        "price": "10,90",
+        "position": 7
+      },
+      {
+        "id": 64,
+        "title": "Tortinha de Morango",
+        "desc": "",
+        "active": true,
+        "price": "7,00",
+        "position": 8
+      },
+      {
+        "id": 83,
+        "title": "Folhado de Creme",
+        "desc": "",
+        "active": true,
+        "price": "6,00",
+        "position": 10
+      },
+      {
+        "id": 82,
+        "title": "Folhado de Goiaba",
+        "desc": "",
+        "active": true,
+        "price": "6,00",
+        "position": 9
+      },
+      {
+        "id": 104,
+        "title": "Folhado de Brigadeiro",
+        "desc": "",
+        "active": true,
+        "price": "6,00",
+        "position": 11
+      },
+      {
+        "id": 106,
+        "title": "Cupcake",
+        "desc": "",
+        "active": true,
+        "price": "6,00",
+        "position": 12
+      },
+      {
+        "id": 56,
+        "title": "Bolo do dia",
+        "desc": "Cenoura, Brigadeiro, Laranja, Churros",
+        "active": true,
+        "price": "6,00",
+        "position": 0
+      },
+      {
+        "id": 60,
+        "title": "Tarteletes",
+        "desc": "Escolha o sabor: Leite condensado, Limão, Brigadeiro",
+        "active": true,
+        "price": "4,00",
+        "position": 4
+      },
+      {
+        "id": 59,
+        "title": "Palha Italiana",
+        "desc": "",
+        "active": true,
+        "price": "3,00",
+        "position": 3
+      },
+      {
+        "id": 61,
+        "title": "Torta Cookie Recheada de Brigadeiro",
+        "desc": "",
+        "active": true,
+        "price": "9,90",
+        "position": 5
+      },
+      {
+        "id": 58,
+        "title": "Folhado de Limão",
+        "desc": "",
+        "active": true,
+        "price": "6,00",
+        "position": 2
+      }
+    ],
+    "category": "Doces",
+    "description": "",
+    "active": true,
+    "position": 6,
+    "user": 2
+  },
+  {
+    "id": 8,
+    "items": [
+      {
+        "id": 65,
+        "title": "Água (500ml)",
+        "desc": "",
+        "active": true,
+        "price": "3,00",
+        "position": 1
+      },
+      {
+        "id": 72,
+        "title": "Suco de Laranja Natural (300ml)",
+        "desc": "",
+        "active": true,
+        "price": "5,00",
+        "position": 8
+      },
+      {
+        "id": 71,
+        "title": "Suco de Laranja Natural (500ml)",
+        "desc": "",
+        "active": true,
+        "price": "6,90",
+        "position": 9
+      },
+      {
+        "id": 70,
+        "title": "Refrigerante (Lata)",
+        "desc": "",
+        "active": true,
+        "price": "5,90",
+        "position": 7
+      },
+      {
+        "id": 69,
+        "title": "Café Espresso Duplo",
+        "desc": "",
+        "active": true,
+        "price": "6,50",
+        "position": 6
+      },
+      {
+        "id": 68,
+        "title": "Café Espresso",
+        "desc": "",
+        "active": true,
+        "price": "3,50",
+        "position": 5
+      },
+      {
+        "id": 67,
+        "title": "Café com leite",
+        "desc": "",
+        "active": true,
+        "price": "5,50",
+        "position": 4
+      },
+      {
+        "id": 66,
+        "title": "Café Americano",
+        "desc": "",
+        "active": true,
+        "price": "4,60",
+        "position": 3
+      },
+      {
+        "id": 84,
+        "title": "Água com gás (500ml)",
+        "desc": "",
+        "active": true,
+        "price": "3,50",
+        "position": 2
+      },
+      {
+        "id": 86,
+        "title": "Suco Polpa 300ml",
+        "desc": "Consulte a disponibilidade dos sabores",
+        "active": false,
+        "price": "6,00",
+        "position": 10
+      },
+      {
+        "id": 85,
+        "title": "Red Bull",
+        "desc": "",
+        "active": true,
+        "price": "10,00",
+        "position": 11
+      },
+      {
+        "id": 105,
+        "title": "Suco Polpa 500ml",
+        "desc": "Consulte a disponibilidade dos sabores",
+        "active": true,
+        "price": "6,90",
+        "position": 10
+      }
+    ],
+    "category": "Bebidas",
+    "description": "",
+    "active": true,
+    "position": 7,
+    "user": 2
+  },
+  {
+    "id": 6,
+    "items": [
+      {
+        "id": 41,
+        "title": "Enroladinho de salsicha",
+        "desc": "",
+        "active": true,
+        "price": "6,00",
+        "position": 4
+      },
+      {
+        "id": 55,
+        "title": "Sanduíche misto de pão baguete",
+        "desc": "",
+        "active": true,
+        "price": "8,90",
+        "position": 16
+      },
+      {
+        "id": 54,
+        "title": "Sanduíche de queijo e salada em pão baguete",
+        "desc": "",
+        "active": true,
+        "price": "8,90",
+        "position": 15
+      },
+      {
+        "id": 40,
+        "title": "Croissant Napolitano",
+        "desc": "",
+        "active": true,
+        "price": "7,90",
+        "position": 3
+      },
+      {
+        "id": 43,
+        "title": "Folhado de Frango",
+        "desc": "",
+        "active": true,
+        "price": "7,00",
+        "position": 6
+      },
+      {
+        "id": 39,
+        "title": "Croissant de Frango com requeijão",
+        "desc": "",
+        "active": true,
+        "price": "8,90",
+        "position": 2
+      },
+      {
+        "id": 37,
+        "title": "Cachorrinho",
+        "desc": "",
+        "active": true,
+        "price": "6,00",
+        "position": 0
+      },
+      {
+        "id": 49,
+        "title": "Pão na chapa com ovo",
+        "desc": "",
+        "active": true,
+        "price": "5,50",
+        "position": 9
+      },
+      {
+        "id": 46,
+        "title": "Pão na chapa",
+        "desc": "",
+        "active": true,
+        "price": "4,00",
+        "position": 8
+      },
+      {
+        "id": 38,
+        "title": "Coxinha",
+        "desc": "",
+        "active": true,
+        "price": "7,00",
+        "position": 1
+      },
+      {
+        "id": 44,
+        "title": "Folhado de Queijo",
+        "desc": "",
+        "active": true,
+        "price": "7,00",
+        "position": 7
+      },
+      {
+        "id": 50,
+        "title": "Pão pizza calabresa",
+        "desc": "",
+        "active": true,
+        "price": "5,50",
+        "position": 10
+      },
+      {
+        "id": 47,
+        "title": "Pastel de forno de queijo",
+        "desc": "",
+        "active": true,
+        "price": "6,00",
+        "position": 11
+      },
+      {
+        "id": 51,
+        "title": "Pastel de forno de frango",
+        "desc": "",
+        "active": true,
+        "price": "6,00",
+        "position": 12
+      },
+      {
+        "id": 53,
+        "title": "Sanduíche de frango com queijo e salada em pão de leite",
+        "desc": "",
+        "active": true,
+        "price": "10,90",
+        "position": 14
+      },
+      {
+        "id": 52,
+        "title": "Pastel de forno de camarão",
+        "desc": "",
+        "active": true,
+        "price": "8,00",
+        "position": 13
+      },
+      {
+        "id": 42,
+        "title": "Folhado de camarão",
+        "desc": "",
+        "active": true,
+        "price": "8,00",
+        "position": 5
+      },
+      {
+        "id": 92,
+        "title": "Cigarrete",
+        "desc": "",
+        "active": true,
+        "price": "10,90",
+        "position": 17
+      }
+    ],
+    "category": "Salgados",
+    "description": "",
+    "active": true,
+    "position": 5,
+    "user": 2
+  }
+]

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const endpoints = {
-  baseurl: "https://menu-manager-backend.herokuapp.com/api/",
+  baseurl: process.env.REACT_APP_ENVIROMENT ?? "https://menu-manager-backend.herokuapp.com/api/" ,
   user: {
     login: "login/",
     signup: "signup/",

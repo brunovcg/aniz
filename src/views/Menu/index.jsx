@@ -70,7 +70,7 @@ const Menu = () => {
             ))}
         </div>
         <details className="management">
-          <summary>Aniz Restaurante</summary>
+          <summary>Meu Restaurante</summary>
           <div className="button-box">
             <Button onClick={() => navigate("/login")}>Área Restrita</Button>
           </div>
