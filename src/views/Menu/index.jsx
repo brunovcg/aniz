@@ -60,7 +60,7 @@ const Menu = () => {
                       <div className="title-price">
                         <div className="title">{item.title}</div>
                         <div className="price">
-                          {item.price ? "R$ " + item.price : ""}
+                          {item.price ? <><div className="currency">{"R$ "}</div><div className="value">{item.price}</div></> : ""}
                         </div>
                       </div>
                       <p className="desc">{item.desc}</p>

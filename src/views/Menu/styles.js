@@ -31,8 +31,8 @@ const Styled = styled.div`
       }
 
       .logo-box {
-        width: 90%;
-
+        display: flex;
+        justify-content: center;
         width: 80%;
         img {
           color: var(--white);
@@ -68,9 +68,8 @@ const Styled = styled.div`
     }
 
     .box {
-      width: 100%;
       margin-top: 30px;
-      width: 70%;
+      width: 80%;
       display: flex;
       justify-content: start;
       align-items: center;
@@ -128,21 +127,40 @@ const Styled = styled.div`
 
             .title {
               color: ${(props) => props.webStyling.item_color};
+              width: 90%;
             }
             .price {
               color: ${(props) => props.webStyling.price_color};
+              width: 10%;
+              display: flex;
+
+              .currency{
+                width: 20%;
+              }
+              .value{
+                width: 80%;
+                text-align: end;
+              }
             }
 
             @media (max-width: ${`${mobileBreakpoint}px`}) {
-              font-size: 18px;
+              font-size: 16px;
+
+              .title {
+              width: 78%;
+            }
 
               .price {
-                width: 30%;
                 text-align: end;
-
-                @media (max-width: ${`${mobileBreakpoint}px`}) {
-                  width: 40%;
-                }
+                width: 22%;
+                .currency{
+                width: 30%;
+              }
+              .value{
+                width: 70%;
+                text-align: end;
+              }
+                
               }
             }
           }
